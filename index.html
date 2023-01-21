@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="./recursos/iconos/logo-color.png" type="image/x-icon">
+
+    <!-- ESTILOS DE AINMATECSS -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" />
+    <!-- ICONOS -->
+    <script src="https://kit.fontawesome.com/de8fe1cee1.js" crossorigin="anonymous"></script>
+    <!-- MIS ESTILOS -->
+    <link rel="stylesheet" href="css/style.css">
+
+    <title>Acatraz</title>
+</head>
+
+<body>
+    <header class="menu">
+        <nav class="menu__container">
+            <img class="menu__logo" src="./recursos/iconos/logo-sinfondo.png" alt="">
+            <ul class="menu__options">
+                <li><a href="#">Inicio</a></li>
+                <li><a href="./sections/servicios.html">Servicios</a></li>
+                <li><a href="./sections/carta.html">Carta</a></li>
+                <li><a href="./sections/Contacto.html">Contacto</a></li>
+            </ul>
+        </nav>
+        <hr>
+    </header>
+
+
+
+    <main class="main">
+        <section class="main__sectionPresentacion">
+            <div class="main__logoPregunta">
+                <img src="./recursos/iconos/logo-color.png" alt="">
+                <h2>¿Estas listo para divertirte?</h2>
+            </div>
+            <div class="main__aviso">
+                <p>
+                    <i class="fa-sharp fa-solid fa-circle-check" style="color: #008000; padding-right: 8px"></i>
+                    ABIERTO
+                </p>
+            </div>
+        </section>
+
+        <section class="main__sectionInformacion">
+            <div class="wow main__informacion animate__animated animate__jackInTheBox">
+                <video
+                    src="./recursos/videos/Acatraz.mp4"
+                    controls></video>
+                <p>ACATRAZ una empresa dedicada a espectáculos, gastronomía, eventos y diversión, con múltiples
+                    espacios. <br>
+                    Para disfrutar de día y de noche con las mejores comodidades.</p>
+            </div>
+            <aside class="wow main__informacionHorarios animate__animated animate__jackInTheBox">
+                <div class="main__titleHorarios">
+                    <h2>Horario de Atencion</h2>
+                </div>
+                <hr>
+                <div class="main__horarios">
+                    <ul>
+                        <li>Domingo</li>
+                        <li>Lunes</li>
+                        <li>Martes</li>
+                        <li>Miercoles</li>
+                        <li>Jueves</li>
+                        <li>Viernes</li>
+                        <li>Sabado</li>
+                    </ul>
+                    <ul class="main__horarios-separacion">
+                        <li>16:00 - Media Noche</li>
+                        <li>Cerrado</li>
+                        <li>Cerrado</li>
+                        <li>17:00 - Media Noche</li>
+                        <li>17:00 - Media Noche</li>
+                        <li>17:00 - Media Noche</li>
+                        <li>16:00 - Media Noche</li>
+                    </ul>
+                </div>
+
+                <button class="main__botonHorarios">Reservar</button>
+            </aside>
+        </section>
+
+
+        <section class="main__sectionGaleria">
+            <h2>Galeria</h2>
+            <div class="main__containerGaleria">
+                <img src="./recursos/imagenes/auditorio.jpg" alt="">
+                <img src="./recursos/imagenes/bowling2.jpg" alt="">
+                <img src="./recursos/imagenes/comida.jpg" alt="">
+                <img src="./recursos/imagenes/entrada.jpg" alt="">
+                <img src="./recursos/imagenes/escenario.jpg" alt="">
+                <img src="./recursos/imagenes/kiss.jpg" alt="">
+                <img src="./recursos/imagenes/metegol.jpg" alt="">
+                <img src="./recursos/imagenes/pinpong.jpg" alt="">
+                <img src="./recursos/imagenes/pool.jpg" alt="">
+                <img src="./recursos/imagenes/salaEnsayo.jpg" alt="">
+                <img src="./recursos/imagenes/zonaDeJuegos.jpg" alt="">
+            </div>
+        </section>
+    </main>
+
+    <footer class="footer">
+        <div class="footer__container">
+            <img class="footer__logo" src="./recursos/iconos/logo-sinfondo.png" alt="">
+            <ul class="footer__options">
+                <li><a href="">Juegos</a></li>
+                <li><a href="">Sala de ensayo</a></li>
+                <li><a href="">Preguntas</a></li>
+            </ul>
+            <ul class="footer__options">
+                <li><a href="">Empleos</a></li>
+                <li><a href="">Sobre Nosotros</a></li>
+                <li><a href="">Menu</a></li>
+            </ul>
+            <ul class="footer__redesSociales footer__options">
+                <li><i class="fa-brands fa-instagram"></i><a href="">acatraz.oficial</a></li>
+                <li><i class="fa-brands fa-facebook"></i><a href="">Acatraz</a></li>
+            </ul>
+        </div>
+        <div class="footer__direction">
+            <i class="fa-solid fa-location-dot"></i><a href="">Av. RIVADAVIA 3636 - ALMAGRO - CABA</a>
+        </div>
+
+        <div class="footer__copyright">
+            <hr>
+            <p>Copyright © 2023 Acatraz by <a href="">Jaiiirot</a></p>
+        </div>
+    </footer>
+</body>
+<script src="js/wow.js"></script>
+<script>
+    new WOW().init();
+</script>
+
+</html>

@@ -1,0 +1,228 @@
+@import url('https://fonts.googleapis.com/css2?family=Chelsea+Market&family=GFS+Neohellenic:ital,wght@0,400;0,700;1,400;1,700&display=swap');
+::-webkit-scrollbar{
+    display: none;
+}
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+}
+
+:root{
+    --color-principal: #111111;
+    --color-dos: #E1303B;
+    --color-tres: #46A7DF;
+    --color-cuatro: #202947;
+    --color-cinco: #dbdbdb;
+    --color-seis: #E5E811;
+    --font-family-text: 'GFS Neohellenic', sans-serif;
+    --font-family-title: 'Chelsea Market', cursive;
+}
+
+/* ============= INDEX ============ */
+
+/* MENU */
+.menu{
+    width: 100%;
+    height: 9vh;
+    background: var(--color-principal);
+    position: sticky;
+    top: 0;
+    z-index: 100;
+}
+.menu__container{
+    width: 90%;
+    height: inherit;
+    margin: auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.menu__logo{
+    width: 100px;
+    cursor: pointer;
+}
+.menu__options{
+    display: flex;
+    gap: 5rem;
+    font-size: 1.2rem;
+    list-style-type: none;
+}
+.menu__options li a{
+    font-family: var(--font-family-title);
+    color: #fff;
+}
+
+/* INDEX ====== */
+
+/* main - presentacion */
+.main{
+    background: var(--color-principal);
+}
+.main__sectionPresentacion{
+    background: url('../recursos/iconos/fondoPool.jpg') no-repeat center fixed;
+    background-size: cover;
+    width: 100%;
+    height: 91vh;
+    position: relative;
+}
+.main__logoPregunta{
+    text-align: center;
+    position: relative;
+    top: 12vh;
+    backdrop-filter: blur(2px);
+    padding: 20px;
+}
+.main__logoPregunta h2{
+    font-size: 3rem;
+    color: #fff;
+    font-family: var(--font-family-title);
+}
+.main__aviso{
+    color: #000;
+    font-weight: 600;
+    background: #fff;
+    border-radius: 15px;
+    padding: 10px 5px;
+    z-index: 1;
+    position: absolute;
+    top: 10%;
+    right: 10%;
+    display: inline;
+    text-align: center;
+    font-size: 1.5rem;
+}
+
+/* main - informacion */
+
+.main__sectionInformacion{
+    display: flex;
+    height: 100vh;
+    justify-content: center;
+    align-items: center;
+    gap: 6rem;
+}
+.main__informacion p{
+    padding-top: 10px;
+}
+.main__informacionHorarios, .main__informacion{
+    background: var(--color-cinco);
+    border-radius: 50px;
+    padding: 20px 20px;
+    text-align: center;
+    color: #000;
+    width: 500px;
+    height: 500px;
+}
+.main__informacion video{
+    width: 400px;
+    height: 390px;
+    background: #000;
+    border-radius: 50px 50px 0px 0px;
+}
+.main__titleHorarios h2{
+    font-family: var(--font-family-title);
+    color: var(--color-principal);
+    font-size: 1.5rem;
+    padding-bottom: 10px;
+}
+.main__horarios{
+    display: flex;
+    justify-content: space-around;
+    padding: 30px 0px 20px;
+}
+.main__horarios ul{
+    list-style-type: none;
+    display: flex;
+    flex-direction: column;
+    gap: 25px;
+    font-size: 1.2rem;
+    font-weight: 700;
+}
+.main__horarios-separacion{
+    align-items: flex-end;
+}
+.main__botonHorarios{
+    background: #000000;
+    color: #fff;
+    border-radius: 25px;
+    padding: 10px 60px;
+    font-size: 1rem;
+}
+
+/* main - Galeria */
+
+.main__containerGaleria{
+    text-align: center;
+    padding: 0px 100px 50px;
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+}
+.main__sectionGaleria  h2{
+    font-size: 4rem;
+    text-align: center;
+    color: #fff;
+}
+.main__containerGaleria img{
+    width: 100%;
+    height: 200px;
+    transition: .5s all;
+}
+.main__containerGaleria img:hover{
+    transform: scale(2);
+    z-index: 2;
+}
+
+
+
+
+
+
+
+
+
+/* ===== Footer =====*/
+
+footer{
+    font-family: var(--font-family-title);
+    background: #000000;
+}
+
+.footer__container{
+    padding: 25px;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+.footer__options{
+    display: flex;
+    flex-direction: column;
+    gap: 25px;
+    list-style-type: none;
+}
+.footer__options li a, i{
+    font-size: 1.2rem;
+    color: #fff;
+}
+.footer__logo{
+    width: 200px;
+}
+.footer__direction, .footer__direction a{
+    text-align: center;
+    padding: 10px;
+    color: #fff;
+}
+.footer__copyright{
+    text-align: center;
+    font-size: 1rem;
+    color: #fff;
+    padding: 10px 0px;
+}
+.footer__copyright hr{
+    width: 70%;
+    margin: auto;
+}
+.footer__copyright a{
+    color: var(--color-dos);
+}
