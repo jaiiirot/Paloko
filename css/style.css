@@ -67,7 +67,7 @@ body{
     background: url('../recursos/iconos/fondoPool.jpg') no-repeat center fixed;
     background-size: cover;
     width: 100%;
-    height: 91vh;
+    height: 110vh;
     position: relative;
 }
 .sectionUnoIndex__logoPregunta{
@@ -100,42 +100,53 @@ body{
 /* main - sectionDosIndex */
 
 .sectionDosIndex{
+    height: max-content;
     display: flex;
-    height: 100vh;
-    justify-content: center;
+    flex-direction: column;
     align-items: center;
-    gap: 6rem;
+    justify-content: center;
+    color: #000;
+    padding: 50px 0px;
+    gap: 50px;
 }
-.sectionDosIndex__informacion p{
-    padding-top: 10px;
-}
-.sectionDosIndex__informacionHorarios, .sectionDosIndex__informacion{
+.sectionDosIndex__informacion, .sectionDosIndex__informacionHorarios{
     background: var(--color-cinco);
-    border-radius: 50px;
-    padding: 20px 20px;
-    text-align: center;
-    color: var(--color-uno);
-    width: 500px;
-    height: 500px;
+    width: 90%;
+    height: max-content;
+    display: flex;
+    border-radius: 55px;
 }
-.sectionDosIndex__informacion video{
-    width: 400px;
-    height: 390px;
+.sectionDosIndex__informacion img{
+    width: 50%;
+    height: initial;
     background: var(--color-uno);
-    border-radius: 50px 50px 0px 0px;
+    border-radius: 50px 0px 0px 50px;
 }
-.sectionDosIndex__titleHorarios h2{
-    font-family: var(--font-family-title);
-    color: var(--color-principal);
-    font-size: 1.5rem;
-    padding-bottom: 10px;
+.sectionDosIndex__informacionText{
+    width: 50%;
+    padding: 40px;
+    font-size: 1.3rem;
+    line-height: 30px;
+}
+
+.sectionDosIndex__titleHorarios{
+    padding: 20px;
+    font-size: 1.3rem;
+    width: 60%;
+    line-height: 30px;
 }
 .sectionDosIndex__horarios{
+    padding: 50px 0px 30px;
+    width: 40%;
+    background: var(--color-uno);
+    color: var(--color-cinco);
+    border-radius: 0 50px 50px 0;
+}
+.sectionDosIndex__containerHorarios{
     display: flex;
     justify-content: space-around;
-    padding: 30px 0px 20px;
 }
-.sectionDosIndex__horarios ul{
+.sectionDosIndex__containerHorarios ul{
     list-style-type: none;
     display: flex;
     flex-direction: column;
@@ -143,20 +154,20 @@ body{
     font-size: 1.2rem;
     font-weight: 700;
 }
-.sectionDosIndex__horarios-separacion{
+.sectionDosIndex__containerHorarios-separacion{
     align-items: flex-end;
 }
-.sectionDosIndex__botonHorarios{
-    background: var(--color-uno);
-    color: var(--color-siete);
+.sectionDosIndex__horarios button{
+    background: var(--color-siete);
+    color: var(--color-uno);
     border-radius: 25px;
     padding: 10px 60px;
-    font-size: 1rem;
+    font-size: 1.2rem;
+    cursor: pointer;
+    transform: translateX(9rem);
 }
-
 /* main - sectionTresIndex */
-
-.sectionTresIndex  h2{
+/* .sectionTresIndex  h2{
     font-size: 4rem;
     text-align: center;
     color: var(--color-siete);
@@ -178,7 +189,7 @@ body{
     z-index: 2;
     cursor: pointer;
     border: 6px solid var(--color-cinco);
-}
+} */
 
 /* =========== fin INDEX ===========*/
 /* =========== SERVICIOS =========== */
@@ -193,8 +204,8 @@ body{
 footer{
     font-family: var(--font-family-title);
     background: var(--color-uno);
+    padding: 50px 0px;
 }
-
 .footer__container{
     padding: 25px;
     display: flex;
@@ -204,15 +215,18 @@ footer{
 .footer__options{
     display: flex;
     flex-direction: column;
-    gap: 25px;
+    gap: 20px;
     list-style-type: none;
 }
 .footer__options li a, i{
     font-size: 1.2rem;
     color: var(--color-siete);
 }
+.footer__options li a:hover{
+    color: var(--color-dos);
+}
 .footer__logo{
-    width: 200px;
+    width: 250px;
 }
 .footer__direction, .footer__direction a{
     text-align: center;
@@ -223,7 +237,7 @@ footer{
     text-align: center;
     font-size: 1rem;
     color: var(--color-siete);
-    padding: 10px 0px;
+    padding: 2rem 0px 0px;
 }
 .footer__copyright hr{
     width: 70%;
