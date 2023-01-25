@@ -98,7 +98,6 @@ body{
 }
 
 /* main - sectionDosIndex */
-
 .sectionDosIndex{
     height: max-content;
     display: flex;
@@ -128,7 +127,6 @@ body{
     font-size: 1.3rem;
     line-height: 30px;
 }
-
 .sectionDosIndex__titleHorarios{
     padding: 20px;
     font-size: 1.3rem;
@@ -166,6 +164,7 @@ body{
     cursor: pointer;
     transform: translateX(9rem);
 }
+
 /* main - sectionTresIndex */
 /* .sectionTresIndex  h2{
     font-size: 4rem;
