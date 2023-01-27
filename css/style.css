@@ -243,7 +243,38 @@ footer{
 
 
 
+    .sectionDosIndex{
 
+    }
+    .sectionDosIndex__informacion, .sectionDosIndex__informacionHorarios{
+        flex-direction: column;
+    }
+    .sectionDosIndex__informacion img{
+
+    }
+    .sectionDosIndex__informacionText{
+
+    }
+    .sectionDosIndex__titleHorarios{
+        width: 100%;
+        font-size: 1rem;
+        line-height: unset;
+        padding: 20px;
+    }
+    .sectionDosIndex__horarios{
+        width: 100%;
+        padding: 10px;
+    }
+    .sectionDosIndex__containerHorarios{
+
+    }
+    .sectionDosIndex__containerHorarios ul{
+
+    }
+    .sectionDosIndex__horarios button{
+        transform: translateX(2rem);
+        padding: 5px 60px;
+    }
 
 
 
