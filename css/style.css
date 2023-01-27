@@ -232,47 +232,52 @@ footer{
 
 
 
-
-
-
-
-
-
-
-
-
-
+    .sectionUnoIndex{
+        background: url('../recursos/iconos/fondoPool.jpg') no-repeat center fixed;
+        background-size: cover;
+        width: 100%;
+        height: 110vh;
+        position: relative;
+    }
+    .sectionUnoIndex__logoPregunta img{
+        width: 90%;
+     }
+    .sectionUnoIndex__logoPregunta h2{
+        font-size: 1.5rem;
+     }
+    .sectionUnoIndex__aviso{
+        display: none;
+    }
 
     .sectionDosIndex{
 
     }
     .sectionDosIndex__informacion, .sectionDosIndex__informacionHorarios{
         flex-direction: column;
+        width: 100%;
     }
     .sectionDosIndex__informacion img{
-
+        width: 100%;
     }
-    .sectionDosIndex__informacionText{
-
-    }
-    .sectionDosIndex__titleHorarios{
+    .sectionDosIndex__informacionText, .sectionDosIndex__titleHorarios{
         width: 100%;
         font-size: 1rem;
         line-height: unset;
         padding: 20px;
     }
+    .informacionText-none{
+        display: none;
+    }
     .sectionDosIndex__horarios{
         width: 100%;
         padding: 10px;
     }
-    .sectionDosIndex__containerHorarios{
-
-    }
     .sectionDosIndex__containerHorarios ul{
-
+        padding: 0;
+        font-size: .9rem
     }
     .sectionDosIndex__horarios button{
-        transform: translateX(2rem);
+        transform:unset;
         padding: 5px 60px;
     }
 
@@ -286,9 +291,13 @@ footer{
     .footer__container{
         flex-direction: column;
     }
+    .footer__logo{
+        width: 90%;
+    }
     .footer__options{
         flex-direction: row;
         gap: 40px;
+        padding: 0;
     }
     .footer__options li a, i{
         font-size: 1rem;
