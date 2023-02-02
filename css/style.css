@@ -45,12 +45,13 @@
 }
 .nav-link{
     color: var(--color-cinco) !important;
-    font-size: 1.3rem;
+    font-size: 1.3rem!important;
     font-weight: 500;
     font-family: var(--font-family-title) !important;
 }
-.active{
+.navbar-collapse .active{
     color: #E1303B!important;
+    font-weight: 700;
 }
 
 /* =========== INDEX ========== */
@@ -75,7 +76,7 @@ body{
     padding: 20px;
 }
 .sectionUnoIndex__logoPregunta img{
-    animation: rotate 5s ease-in-out infinite;
+    animation: rotate 5s ease-in-out;
 }
 .sectionUnoIndex__logoPregunta h2{
     font-size: 3rem;
@@ -225,8 +226,20 @@ body{
 }
 
 /* =========== fin EVENTOS ========= */
+/* =========== SERVICIOS =========== */
 
 
+.sectionDosServicios{
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+}
+.card-img-overlay{
+    background: #000C;
+    cursor: pointer;
+    top: unset;
+}
+
+/* =========== fin SERVICIOS =========== */
 /* ===== Footer =====*/
 
 footer{
@@ -332,6 +345,17 @@ footer{
 
     /* RESPONSIVE DESING - FIN EVENTOS */
 
+    /* RESPONSIVE DESING - SERVICIOS */
+
+    .sectionDosServicios{
+        grid-template-columns: repeat(1, 1fr);
+    }
+    .card-img-overlay{
+        font-size: .9rem!important;
+    }
+    /* RESPONSIVE DESING - FIN SERVICIOS */
+
+
     /* RESPONSIVE DESING - FOOTER */
 
     .footer{
@@ -404,6 +428,13 @@ footer{
     }
 
     /* RESPONSIVE DESING - FIN EVENTOS */
+
+    /* RESPONSIVE DESING - SERVICIOS */
+
+    .card-img-overlay{
+        top: 0;
+    }
+    /* RESPONSIVE DESING - FIN SERVICIOS */
 
     /* RESPONSIVE DESING - FOOTER */
     .footer{
