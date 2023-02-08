@@ -1,0 +1,105 @@
+
+
+
+
+
+/* ===== Footer =====*/
+
+footer{
+    font-family: var(--font-family-title);
+    background: var(--color-uno);
+    padding: 50px 0px;
+}
+.footer__container{
+    padding: 25px;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+.footer__options{
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    list-style-type: none;
+}
+.footer__options li a, i{
+    font-size: 1.2rem;
+    color: var(--color-siete);
+}
+.footer__options li a:hover{
+    color: var(--color-dos);
+}
+.footer__logo{
+    width: 250px;
+}
+.footer__direction, .footer__direction a{
+    text-align: center;
+    padding: 10px;
+    color: var(--color-siete);
+}
+.footer__copyright{
+    text-align: center;
+    font-size: 1rem;
+    color: var(--color-siete);
+    padding: 2rem 0px 0px;
+}
+.footer__copyright hr{
+    width: 70%;
+    margin: auto;
+}
+.footer__copyright a{
+    color: var(--color-dos);
+}
+
+
+  /* ===== TABLET ===== */
+
+  @media (max-width: 1030px) {
+
+
+
+    /* RESPONSIVE DESING - FOOTER */
+
+    .footer{
+        padding: 10px 0px;
+    }
+    .footer__logo{
+        width: 90%;
+    }
+    .footer__container img{
+        width: 150px;
+    }
+    .footer__options li a, i{
+        font-size: 1rem;
+    }
+
+    /* RESPONSIVE DESING - FIN FOOTER */
+}
+
+
+    /* ===== MOBILE ===== */
+
+@media (max-width: 576px) {
+
+
+    /* RESPONSIVE DESING - FOOTER */
+    .footer{
+        padding: 10px 0px;
+    }
+    .footer__container{
+        flex-direction: column;
+        padding: 0px;
+    }
+    .footer__logo{
+        width: 90%;
+    }
+    .footer__options{
+        flex-direction: row;
+        gap: 40px;
+        padding: 0;
+    }
+    .footer__options li a, i{
+        font-size: 1rem;
+    }
+
+}

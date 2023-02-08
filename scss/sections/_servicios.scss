@@ -1,0 +1,42 @@
+/* =========== SERVICIOS =========== */
+
+
+.sectionDosServicios{
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+}
+.card-img-overlay{
+    background: #000C;
+    cursor: pointer;
+    top: unset;
+}
+
+/* =========== fin SERVICIOS =========== */
+
+  /* ===== TABLET ===== */
+
+@media (max-width: 1030px) {
+
+    /* RESPONSIVE DESING - SERVICIOS */
+
+    .sectionDosServicios{
+        grid-template-columns: repeat(1, 1fr);
+    }
+    .card-img-overlay{
+        font-size: .9rem!important;
+    }
+    /* RESPONSIVE DESING - FIN SERVICIOS */
+}
+
+    /* ===== MOBILE ===== */
+
+    @media (max-width: 576px) {
+
+
+        /* RESPONSIVE DESING - SERVICIOS */
+    
+        .card-img-overlay{
+            top: 0;
+        }
+        /* RESPONSIVE DESING - FIN SERVICIOS */
+    }

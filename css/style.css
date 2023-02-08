@@ -1,464 +1,399 @@
-@import url('https://fonts.googleapis.com/css2?family=Chelsea+Market&family=GFS+Neohellenic:ital,wght@0,400;0,700;1,400;1,700&display=swap');
-::-webkit-scrollbar{
-    display: none;
-}
-*{
-    padding: 0;
-    margin: 0;
-    box-sizing: border-box;
-    text-decoration: none !important;
-}
+@import url("https://fonts.googleapis.com/css2?family=Chelsea+Market&family=GFS+Neohellenic:ital,wght@0,400;0,700;1,400;1,700&display=swap");
+::-webkit-scrollbar {
+  display: none; }
 
-:root{
-    --color-principal: #0f0f0f;
-    --color-uno: #000;
-    --color-dos: #E1303B;
-    --color-tres: #46A7DF;
-    --color-cuatro: #202947;
-    --color-cinco: #dbdbdb;
-    --color-seis: #E5E811;
-    --color-siete: #fff;
-    --font-family-text: 'GFS Neohellenic', sans-serif;
-    --font-family-title: 'Chelsea Market', cursive;
-}
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  text-decoration: none !important; }
 
-/* ============= INDEX ============ */
+body {
+  background: var(--color-principal);
+  color: var(--color-siete); }
 
-/* MENU */
-.menu{
-    width: 100%;
-    height: min-content;
-    background: var(--color-uno);
-    position: sticky;
-    top: 0;
-    z-index: 100;
-}
-.navbar-toggler{
-    background: var(--color-cinco);
-    border-radius: 20px!important;
-}
-.navbar-nav{
-    gap: 20px !important;
-}
-.navbar-collapse{
-    flex-grow: 0 !important;
-}
-.nav-link{
-    color: var(--color-cinco) !important;
-    font-size: 1.3rem!important;
-    font-weight: 500;
-    font-family: var(--font-family-title) !important;
-}
-.navbar-collapse .active{
-    color: #E1303B!important;
-    font-weight: 700;
-}
-
-/* =========== INDEX ========== */
-
-/* main - sectionUnoIndex */
-body{
-    background: var(--color-principal);
-    color: var(--color-siete);
-}
-.sectionUnoIndex{
-    background: url('../recursos/iconos/fondoPool.jpg') no-repeat center;
-    background-size: cover;
-    width: 100%;
-    height: 110vh;
-    position: relative;
-}
-.sectionUnoIndex__logoPregunta{
-    text-align: center;
-    position: relative;
-    top: 12vh;
-    backdrop-filter: blur(2px);
-    padding: 20px;
-}
-.sectionUnoIndex__logoPregunta img{
-    animation: rotate 5s ease-in-out;
-}
-.sectionUnoIndex__logoPregunta h2{
-    font-size: 3rem;
-    color: var(--color-siete);
-    font-family: var(--font-family-title);
-}
-.sectionUnoIndex__aviso{
-    color: var(--color-uno);
-    font-weight: 600;
-    background: var(--color-siete);
-    border-radius: 15px;
-    padding: 10px 5px;
-    z-index: 1;
-    position: absolute;
-    top: 10%;
-    right: 10%;
-    display: inline;
-    text-align: center;
-    font-size: 1.5rem;
-}
-.sectionUnoIndex__aviso p{
-    margin: 0px;
-}
-
-/* main - sectionDosIndex */
-.sectionDosIndex{
-    height: max-content;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    color: #000;
-    padding: 50px 0px;
-    gap: 50px;
-}
-.sectionDosIndex__informacion{
-    background: var(--color-siete);
-}
-.sectionDosIndex__informacion, .sectionDosIndex__informacionHorarios{
-    width: 95%;
-    height: max-content;
-    display: flex;
-    border-radius: 55px;
-}
-.sectionDosIndex__informacion img{
-    width: 50%;
-    height: initial;
-    background: var(--color-uno);
-    border-radius: 50px 0px 0px 50px;
-}
-.sectionDosIndex__informacionText{
-    width: 50%;
-    padding: 40px;
-    font-size: 1.3rem;
-    line-height: 30px;
-}
-.sectionDosIndex__titleHorarios{
-    padding: 50px;
-    font-size: 1.3rem;
-    width: 60%;
-    line-height: 25px;
-    background: var(--color-siete);
-}
-.sectionDosIndex__horarios{
-    margin: auto;
-    padding: 50px 0px;
-    width: 40%;
-    background: var(--color-uno);
-    color: var(--color-cinco);
-    border-radius: 0 50px 50px 0;
-}
-.sectionDosIndex__containerHorarios{
-    display: flex;
-    justify-content: space-around;
-}
-.sectionDosIndex__containerHorarios ul{
-    list-style-type: none;
-    display: flex;
-    flex-direction: column;
-    gap: 25px;
-    font-size: 1.2rem;
-    font-weight: 700;
-}
-.sectionDosIndex__containerHorarios ul:not(.sectionDosIndex__containerHorarios-separacion){
-    padding: 0;    
-}
-.sectionDosIndex__containerHorarios-separacion{
-    align-items: flex-end;
-}
-.sectionDosIndex__horarios button{
-    background: var(--color-siete);
-    color: var(--color-uno);
-    border-radius: 25px;
-    padding: 10px 60px;
-    font-size: 1.2rem;
-    cursor: pointer;
-    transform: translateX(9rem);
-}
-/* =========== fin INDEX ===========*/
-/* =========== EVENTOS =========== */
-
-/* section uno - eventos */
-
-
-/* section dos - eventos */
-.sectionDosEventos{
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    gap: 10px;
-    margin: 20px;
-}
-.sectionDosEventos__card{
-    height: min-content;
-    background: var(--color-siete);
-    border-radius: 35px;
-}
-.sectionDosEventos__cardImagen{
-    width: 100%;
-    height: 300px;
-    overflow: hidden;
-}
-.sectionDosEventos__cardImagen img{
-    width: inherit;
-    border-radius: 30px 30px 0px 0px;
-    transition: .5s;
-}
-.sectionDosEventos__cardImagen img:hover{
-    transform: scale(1.2) rotate(-5deg);
-}
-.sectionDosEventos__cardInfo{
-    color: var(--color-uno);
-    padding: 0px 30px 15px;
-}
-.sectionDosEventos__cardInfo p{
-    height: 80px;
-    overflow-y: hidden;
-    transition: .5s;
-}
-.sectionDosEventos__cardInfo p:hover{
-    height: min-content;
-}
-.sectionDosEventos__cardInfo .btn{
-    transition: .5s;
-}
-.sectionDosEventos__cardInfo .btn:hover{
-    transform: rotate(-5deg) scale(1.1);
-}
-
-/* =========== fin EVENTOS ========= */
-/* =========== SERVICIOS =========== */
-
-
-.sectionDosServicios{
-    display: grid;
-    grid-template-columns: repeat(2, 1fr);
-}
-.card-img-overlay{
-    background: #000C;
-    cursor: pointer;
-    top: unset;
-}
-
-/* =========== fin SERVICIOS =========== */
-/* =========== CARTA =========== */
-
-
-
-/* =========== fin CARTA =========== */
-/* ===== Footer =====*/
-
-footer{
-    font-family: var(--font-family-title);
-    background: var(--color-uno);
-    padding: 50px 0px;
-}
-.footer__container{
-    padding: 25px;
-    display: flex;
-    justify-content: space-around;
-    align-items: center;
-}
-.footer__options{
-    display: flex;
-    flex-direction: column;
-    gap: 20px;
-    list-style-type: none;
-}
-.footer__options li a, i{
-    font-size: 1.2rem;
-    color: var(--color-siete);
-}
-.footer__options li a:hover{
-    color: var(--color-dos);
-}
-.footer__logo{
-    width: 250px;
-}
-.footer__direction, .footer__direction a{
-    text-align: center;
-    padding: 10px;
-    color: var(--color-siete);
-}
-.footer__copyright{
-    text-align: center;
-    font-size: 1rem;
-    color: var(--color-siete);
-    padding: 2rem 0px 0px;
-}
-.footer__copyright hr{
-    width: 70%;
-    margin: auto;
-}
-.footer__copyright a{
-    color: var(--color-dos);
-}
-
-
+:root {
+  --color-principal: #0f0f0f;
+  --color-uno: #000;
+  --color-dos: #E1303B;
+  --color-tres: #46A7DF;
+  --color-cuatro: #202947;
+  --color-cinco: #dbdbdb;
+  --color-seis: #E5E811;
+  --color-siete: #fff;
+  --font-family-text: 'GFS Neohellenic', sans-serif;
+  --font-family-title: 'Chelsea Market', cursive; }
 
 /* ANIMACIONES */
-
 @keyframes rotate {
-    0%{transform: rotateY(0deg);}
-    100%{transform: rotateY(360deg);}
-}
+  0% {
+    transform: rotateY(0deg); }
+  100% {
+    transform: rotateY(360deg); } }
 
+.menu {
+  width: 100%;
+  height: min-content;
+  background: var(--color-uno);
+  position: sticky;
+  top: 0;
+  z-index: 100; }
 
+.navbar-toggler {
+  background: var(--color-cinco);
+  border-radius: 20px !important; }
 
+.navbar-nav {
+  gap: 20px !important; }
 
+.navbar-collapse {
+  flex-grow: 0 !important; }
 
-  /* ===== TABLET ===== */
+.nav-link {
+  color: var(--color-cinco) !important;
+  font-size: 1.3rem !important;
+  font-weight: 500;
+  font-family: var(--font-family-title) !important; }
 
+.navbar-collapse .active {
+  color: #E1303B !important;
+  font-weight: 700; }
+
+/* ===== Footer =====*/
+footer {
+  font-family: var(--font-family-title);
+  background: var(--color-uno);
+  padding: 50px 0px; }
+
+.footer__container {
+  padding: 25px;
+  display: flex;
+  justify-content: space-around;
+  align-items: center; }
+
+.footer__options {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  list-style-type: none; }
+
+.footer__options li a, i {
+  font-size: 1.2rem;
+  color: var(--color-siete); }
+
+.footer__options li a:hover {
+  color: var(--color-dos); }
+
+.footer__logo {
+  width: 250px; }
+
+.footer__direction, .footer__direction a {
+  text-align: center;
+  padding: 10px;
+  color: var(--color-siete); }
+
+.footer__copyright {
+  text-align: center;
+  font-size: 1rem;
+  color: var(--color-siete);
+  padding: 2rem 0px 0px; }
+
+.footer__copyright hr {
+  width: 70%;
+  margin: auto; }
+
+.footer__copyright a {
+  color: var(--color-dos); }
+
+/* ===== TABLET ===== */
 @media (max-width: 1030px) {
+  /* RESPONSIVE DESING - FOOTER */
+  .footer {
+    padding: 10px 0px; }
+  .footer__logo {
+    width: 90%; }
+  .footer__container img {
+    width: 150px; }
+  .footer__options li a, i {
+    font-size: 1rem; }
+  /* RESPONSIVE DESING - FIN FOOTER */ }
 
-    /* RESPONSIVE DESING - INDEX */
-    .sectionDosIndex__informacion, .sectionDosIndex__informacionHorarios{
-        width: 95%;
-    }
-    .sectionDosIndex__informacion img{
-        width: 60%;
-    }
-    .sectionDosIndex__informacionText{
-        width: 40%;
-        font-size: 1.2rem !important;
-        line-height: 25px;
-    }
-    .informacionText-none{
-        display: none;
-    }
-    .sectionDosIndex__informacionHorarios{
-        flex-direction: column;
-        width: 95%;
-    }
-    .sectionDosIndex__titleHorarios{
-        width: 100%;
-    }
-    .sectionDosIndex__horarios{
-        width: 100%;
-        padding: 10px;
-    }
-    /* RESPONSIVE DESING - FIN INDEX */
-
-    /* RESPONSIVE DESING - EVENTOS */
-
-    .sectionDosEventos{
-        grid-template-columns: repeat(2, 1fr);
-    }
-    .sectionDosEventos__cardInfo{
-        font-size: 0.9rem !important;
-        padding: 0px 20px 10px;
-    }
-
-    /* RESPONSIVE DESING - FIN EVENTOS */
-
-    /* RESPONSIVE DESING - SERVICIOS */
-
-    .sectionDosServicios{
-        grid-template-columns: repeat(1, 1fr);
-    }
-    .card-img-overlay{
-        font-size: .9rem!important;
-    }
-    /* RESPONSIVE DESING - FIN SERVICIOS */
-
-
-    /* RESPONSIVE DESING - FOOTER */
-
-    .footer{
-        padding: 10px 0px;
-    }
-    .footer__logo{
-        width: 90%;
-    }
-    .footer__container img{
-        width: 150px;
-    }
-    .footer__options li a, i{
-        font-size: 1rem;
-    }
-
-    /* RESPONSIVE DESING - FIN FOOTER */
-}
-
-
-    /* ===== MOBILE ===== */
-
+/* ===== MOBILE ===== */
 @media (max-width: 576px) {
+  /* RESPONSIVE DESING - FOOTER */
+  .footer {
+    padding: 10px 0px; }
+  .footer__container {
+    flex-direction: column;
+    padding: 0px; }
+  .footer__logo {
+    width: 90%; }
+  .footer__options {
+    flex-direction: row;
+    gap: 40px;
+    padding: 0; }
+  .footer__options li a, i {
+    font-size: 1rem; } }
 
+/* =========== INDEX ========== */
+/* main - sectionUnoIndex */
+.sectionUnoIndex {
+  background: url("../recursos/iconos/fondoPool.jpg") no-repeat center;
+  background-size: cover;
+  width: 100%;
+  height: 110vh;
+  position: relative; }
 
-    /* RESPONSIVE DESING - INDEX */
+.sectionUnoIndex__logoPregunta {
+  text-align: center;
+  position: relative;
+  top: 12vh;
+  backdrop-filter: blur(2px);
+  padding: 20px; }
 
-    .sectionUnoIndex__logoPregunta img{
-        width: 90%;
-     }
-    .sectionUnoIndex__logoPregunta h2{
-        font-size: 1.5rem;
-     }
-    .sectionUnoIndex__aviso{
-        display: none;
-    }
-    .sectionDosIndex__informacion, .sectionDosIndex__informacionHorarios{
-        flex-direction: column;
-        width: 95%;
-    }
-    .sectionDosIndex__informacion img{
-        width: 100%;
-    }
-    .sectionDosIndex__informacionText, .sectionDosIndex__titleHorarios{
-        width: 100%;
-        font-size: 1rem;
-        line-height: unset;
-        padding: 20px;
-    }
-    .informacionText-none{
-        display: none;
-    }
-    .sectionDosIndex__horarios{
-        width: 100%;
-        padding: 10px;
-    }
-    .sectionDosIndex__containerHorarios ul{
-        padding: 0;
-        font-size: .9rem
-    }
-    .sectionDosIndex__horarios button{
-        transform:unset;
-        padding: 5px 60px;
-    }
-    /* RESPONSIVE DESING - FIN INDEX */
-   
-    /* RESPONSIVE DESING - EVENTOS */
+.sectionUnoIndex__logoPregunta img {
+  animation: rotate 5s ease-in-out; }
 
-    .sectionDosEventos{
-        grid-template-columns: repeat(1, 1fr);
-    }
+.sectionUnoIndex__logoPregunta h2 {
+  font-size: 3rem;
+  color: var(--color-siete);
+  font-family: var(--font-family-title); }
 
-    /* RESPONSIVE DESING - FIN EVENTOS */
+.sectionUnoIndex__aviso {
+  color: var(--color-uno);
+  font-weight: 600;
+  background: var(--color-siete);
+  border-radius: 15px;
+  padding: 10px 5px;
+  z-index: 1;
+  position: absolute;
+  top: 10%;
+  right: 10%;
+  display: inline;
+  text-align: center;
+  font-size: 1.5rem; }
 
-    /* RESPONSIVE DESING - SERVICIOS */
+.sectionUnoIndex__aviso p {
+  margin: 0px; }
 
-    .card-img-overlay{
-        top: 0;
-    }
-    /* RESPONSIVE DESING - FIN SERVICIOS */
+/* main - sectionDosIndex */
+.sectionDosIndex {
+  height: max-content;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  color: #000;
+  padding: 50px 0px;
+  gap: 50px; }
 
-    /* RESPONSIVE DESING - FOOTER */
-    .footer{
-        padding: 10px 0px;
-    }
-    .footer__container{
-        flex-direction: column;
-        padding: 0px;
-    }
-    .footer__logo{
-        width: 90%;
-    }
-    .footer__options{
-        flex-direction: row;
-        gap: 40px;
-        padding: 0;
-    }
-    .footer__options li a, i{
-        font-size: 1rem;
-    }
+.sectionDosIndex__informacion {
+  background: var(--color-siete); }
 
-}
+.sectionDosIndex__informacion, .sectionDosIndex__informacionHorarios {
+  width: 95%;
+  height: max-content;
+  display: flex;
+  border-radius: 55px; }
+
+.sectionDosIndex__informacion img {
+  width: 50%;
+  height: initial;
+  background: var(--color-uno);
+  border-radius: 50px 0px 0px 50px; }
+
+.sectionDosIndex__informacionText {
+  width: 50%;
+  padding: 40px;
+  font-size: 1.3rem;
+  line-height: 30px; }
+
+.sectionDosIndex__titleHorarios {
+  padding: 50px;
+  font-size: 1.3rem;
+  width: 60%;
+  line-height: 25px;
+  background: var(--color-siete); }
+
+.sectionDosIndex__horarios {
+  margin: auto;
+  padding: 50px 0px;
+  width: 40%;
+  background: var(--color-uno);
+  color: var(--color-cinco);
+  border-radius: 0 50px 50px 0; }
+
+.sectionDosIndex__containerHorarios {
+  display: flex;
+  justify-content: space-around; }
+
+.sectionDosIndex__containerHorarios ul {
+  list-style-type: none;
+  display: flex;
+  flex-direction: column;
+  gap: 25px;
+  font-size: 1.2rem;
+  font-weight: 700; }
+
+.sectionDosIndex__containerHorarios ul:not(.sectionDosIndex__containerHorarios-separacion) {
+  padding: 0; }
+
+.sectionDosIndex__containerHorarios-separacion {
+  align-items: flex-end; }
+
+.sectionDosIndex__horarios button {
+  background: var(--color-siete);
+  color: var(--color-uno);
+  border-radius: 25px;
+  padding: 10px 60px;
+  font-size: 1.2rem;
+  cursor: pointer;
+  transform: translateX(9rem); }
+
+/* =========== fin INDEX ===========*/
+/* ===== TABLET ===== */
+@media (max-width: 1030px) {
+  /* RESPONSIVE DESING - INDEX */
+  .sectionDosIndex__informacion, .sectionDosIndex__informacionHorarios {
+    width: 95%; }
+  .sectionDosIndex__informacion img {
+    width: 60%; }
+  .sectionDosIndex__informacionText {
+    width: 40%;
+    font-size: 1.2rem !important;
+    line-height: 25px; }
+  .informacionText-none {
+    display: none; }
+  .sectionDosIndex__informacionHorarios {
+    flex-direction: column;
+    width: 95%; }
+  .sectionDosIndex__titleHorarios {
+    width: 100%; }
+  .sectionDosIndex__horarios {
+    width: 100%;
+    padding: 10px; } }
+
+/* RESPONSIVE DESING - FIN INDEX */
+/* ===== MOBILE ===== */
+@media (max-width: 576px) {
+  /* RESPONSIVE DESING - INDEX */
+  .sectionUnoIndex__logoPregunta img {
+    width: 90%; }
+  .sectionUnoIndex__logoPregunta h2 {
+    font-size: 1.5rem; }
+  .sectionUnoIndex__aviso {
+    display: none; }
+  .sectionDosIndex__informacion, .sectionDosIndex__informacionHorarios {
+    flex-direction: column;
+    width: 95%; }
+  .sectionDosIndex__informacion img {
+    width: 100%; }
+  .sectionDosIndex__informacionText, .sectionDosIndex__titleHorarios {
+    width: 100%;
+    font-size: 1rem;
+    line-height: unset;
+    padding: 20px; }
+  .informacionText-none {
+    display: none; }
+  .sectionDosIndex__horarios {
+    width: 100%;
+    padding: 10px; }
+  .sectionDosIndex__containerHorarios ul {
+    padding: 0;
+    font-size: .9rem; }
+  .sectionDosIndex__horarios button {
+    transform: unset;
+    padding: 5px 60px; }
+  /* RESPONSIVE DESING - FIN INDEX */ }
+
+/* =========== EVENTOS =========== */
+/* section uno - eventos */
+/* section dos - eventos */
+.sectionDosEventos {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 10px;
+  margin: 20px; }
+
+.sectionDosEventos__card {
+  height: min-content;
+  background: var(--color-siete);
+  border-radius: 35px; }
+
+.sectionDosEventos__cardImagen {
+  width: 100%;
+  height: 300px;
+  overflow: hidden; }
+
+.sectionDosEventos__cardImagen img {
+  width: inherit;
+  border-radius: 30px 30px 0px 0px;
+  transition: .5s; }
+
+.sectionDosEventos__cardImagen img:hover {
+  transform: scale(1.2) rotate(-5deg); }
+
+.sectionDosEventos__cardInfo {
+  color: var(--color-uno);
+  padding: 0px 30px 15px; }
+
+.sectionDosEventos__cardInfo p {
+  height: 80px;
+  overflow-y: hidden;
+  transition: .5s; }
+
+.sectionDosEventos__cardInfo p:hover {
+  height: min-content; }
+
+.sectionDosEventos__cardInfo .btn {
+  transition: .5s; }
+
+.sectionDosEventos__cardInfo .btn:hover {
+  transform: rotate(-5deg) scale(1.1); }
+
+/* =========== fin EVENTOS ========= */
+@media (max-width: 1030px) {
+  /* RESPONSIVE DESING - EVENTOS */
+  .sectionDosEventos {
+    grid-template-columns: repeat(2, 1fr); }
+  .sectionDosEventos__cardInfo {
+    font-size: 0.9rem !important;
+    padding: 0px 20px 10px; }
+  /* RESPONSIVE DESING - FIN EVENTOS */ }
+
+/* ===== MOBILE ===== */
+@media (max-width: 576px) {
+  /* RESPONSIVE DESING - EVENTOS */
+  .sectionDosEventos {
+    grid-template-columns: repeat(1, 1fr); }
+  /* RESPONSIVE DESING - FIN EVENTOS */ }
+
+/* =========== SERVICIOS =========== */
+.sectionDosServicios {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr); }
+
+.card-img-overlay {
+  background: #000C;
+  cursor: pointer;
+  top: unset; }
+
+/* =========== fin SERVICIOS =========== */
+/* ===== TABLET ===== */
+@media (max-width: 1030px) {
+  /* RESPONSIVE DESING - SERVICIOS */
+  .sectionDosServicios {
+    grid-template-columns: repeat(1, 1fr); }
+  .card-img-overlay {
+    font-size: 0.9rem !important; }
+  /* RESPONSIVE DESING - FIN SERVICIOS */ }
+
+/* ===== MOBILE ===== */
+@media (max-width: 576px) {
+  /* RESPONSIVE DESING - SERVICIOS */
+  .card-img-overlay {
+    top: 0; }
+  /* RESPONSIVE DESING - FIN SERVICIOS */ }
+
+/* =========== CARTA =========== */
+/* =========== fin CARTA =========== */
