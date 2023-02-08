@@ -136,7 +136,7 @@ footer {
     font-size: 1rem; } }
 
 /* =========== INDEX ========== */
-/* main - sectionUnoIndex */
+/* sectionUno - Index */
 .sectionUnoIndex {
   background: url("../recursos/iconos/fondoPool.jpg") no-repeat center;
   background-size: cover;
@@ -171,7 +171,7 @@ footer {
     .sectionUnoIndex__aviso p {
       margin: 0px; }
 
-/* main - sectionDosIndex */
+/* sectionDos - Index */
 .sectionDosIndex {
   height: max-content;
   display: flex;
