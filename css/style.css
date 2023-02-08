@@ -143,38 +143,33 @@ footer {
   width: 100%;
   height: 110vh;
   position: relative; }
-
-.sectionUnoIndex__logoPregunta {
-  text-align: center;
-  position: relative;
-  top: 12vh;
-  backdrop-filter: blur(2px);
-  padding: 20px; }
-
-.sectionUnoIndex__logoPregunta img {
-  animation: rotate 5s ease-in-out; }
-
-.sectionUnoIndex__logoPregunta h2 {
-  font-size: 3rem;
-  color: var(--color-siete);
-  font-family: var(--font-family-title); }
-
-.sectionUnoIndex__aviso {
-  color: var(--color-uno);
-  font-weight: 600;
-  background: var(--color-siete);
-  border-radius: 15px;
-  padding: 10px 5px;
-  z-index: 1;
-  position: absolute;
-  top: 10%;
-  right: 10%;
-  display: inline;
-  text-align: center;
-  font-size: 1.5rem; }
-
-.sectionUnoIndex__aviso p {
-  margin: 0px; }
+  .sectionUnoIndex__logoPregunta {
+    text-align: center;
+    position: relative;
+    top: 12vh;
+    backdrop-filter: blur(2px);
+    padding: 20px; }
+    .sectionUnoIndex__logoPregunta img {
+      animation: rotate 5s ease-in-out; }
+    .sectionUnoIndex__logoPregunta h2 {
+      font-size: 3rem;
+      color: var(--color-siete);
+      font-family: var(--font-family-title); }
+  .sectionUnoIndex__aviso {
+    color: var(--color-uno);
+    font-weight: 600;
+    background: var(--color-siete);
+    border-radius: 15px;
+    padding: 10px 5px;
+    z-index: 1;
+    position: absolute;
+    top: 10%;
+    right: 10%;
+    display: inline;
+    text-align: center;
+    font-size: 1.5rem; }
+    .sectionUnoIndex__aviso p {
+      margin: 0px; }
 
 /* main - sectionDosIndex */
 .sectionDosIndex {
@@ -186,42 +181,40 @@ footer {
   color: #000;
   padding: 50px 0px;
   gap: 50px; }
-
-.sectionDosIndex__informacion {
-  background: var(--color-siete); }
-
-.sectionDosIndex__informacion, .sectionDosIndex__informacionHorarios {
-  width: 95%;
-  height: max-content;
-  display: flex;
-  border-radius: 55px; }
-
-.sectionDosIndex__informacion img {
-  width: 50%;
-  height: initial;
-  background: var(--color-uno);
-  border-radius: 50px 0px 0px 50px; }
-
-.sectionDosIndex__informacionText {
-  width: 50%;
-  padding: 40px;
-  font-size: 1.3rem;
-  line-height: 30px; }
-
-.sectionDosIndex__titleHorarios {
-  padding: 50px;
-  font-size: 1.3rem;
-  width: 60%;
-  line-height: 25px;
-  background: var(--color-siete); }
-
-.sectionDosIndex__horarios {
-  margin: auto;
-  padding: 50px 0px;
-  width: 40%;
-  background: var(--color-uno);
-  color: var(--color-cinco);
-  border-radius: 0 50px 50px 0; }
+  .sectionDosIndex__informacion {
+    background: var(--color-siete);
+    width: 95%;
+    height: max-content;
+    display: flex;
+    border-radius: 55px; }
+    .sectionDosIndex__informacion img {
+      width: 50%;
+      height: initial;
+      background: var(--color-uno);
+      border-radius: 50px 0px 0px 50px; }
+    .sectionDosIndex__informacionText {
+      width: 50%;
+      padding: 40px;
+      font-size: 1.3rem;
+      line-height: 30px; }
+  .sectionDosIndex__informacionHorarios {
+    width: 95%;
+    height: max-content;
+    display: flex;
+    border-radius: 55px; }
+    .sectionDosIndex__informacionHorarios .sectionDosIndex__titleHorarios {
+      padding: 50px;
+      font-size: 1.3rem;
+      width: 60%;
+      line-height: 25px;
+      background: var(--color-siete); }
+    .sectionDosIndex__informacionHorarios .sectionDosIndex__horarios {
+      margin: auto;
+      padding: 50px 0px;
+      width: 40%;
+      background: var(--color-uno);
+      color: var(--color-cinco);
+      border-radius: 0 50px 50px 0; }
 
 .sectionDosIndex__containerHorarios {
   display: flex;
