@@ -1,26 +1,39 @@
 /* =========== EVENTOS =========== */
+@mixin Caruseel{
+    height: 40vh;
+    overflow: hidden;
+}
+
 
 /* section uno - eventos */
 .sectionUnoEventos{
-    // &__container{
-    //     display: grid; 
-    //     grid-auto-columns: 1fr; 
-    //     grid-template-columns: 1fr 1fr; 
-    //     grid-template-rows: 1fr 1fr; 
-    //     grid-template-areas: 
-    //     "horizontaal horizontaal "
-    //     "cuadrado1 cuadrado2 ";
-
-    //     &Carusel2{
-    //         grid-area: horizontaal;
-    //     }
-    //     &Carusel3{
-    //         grid-area: cuadrado1;
-    //     }
-    //     &Carusel4{
-    //         grid-area: cuadrado2;
-    //     }
-    // }
+    &__container{
+        position: relative;
+        display: grid; 
+        grid-auto-columns: 1fr; 
+        grid-template-columns: 1fr 1fr;
+        grid-template-areas:
+        "cuadrado1 cuadrado2 ";     
+        align-items: center;
+        height: min-content;
+        &Carusel1{
+            grid-area: cuadrado1;
+            @include Caruseel();
+        }
+        &Carusel2{
+            grid-area: cuadrado2;
+            @include Caruseel();
+        }
+        h1{
+            position: absolute;
+            left: 0;
+            right: 0;
+            margin: auto 0;
+            text-align: center;
+            z-index: 2;
+            background: #000000ad;
+        }
+    }
 
 }
 
@@ -91,6 +104,20 @@
 /* ===== MOBILE ===== */
 
 @media (max-width: 576px) {
+    /* section uno - eventos */
+    .sectionUnoEventos{
+        &__container{
+            grid-template-columns: 1fr;
+            grid-template-areas:
+            "cuadrado1"
+            "cuadrado2 ";     
+            &Carusel1,&Carusel2{
+                height: 20vh;
+            }
+        }
+
+    }
+
     .sectionDosEventos{
         grid-template-columns: repeat(1, 1fr);
     }

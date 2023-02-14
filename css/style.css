@@ -277,6 +277,31 @@ body {
 /* =========== fin INDEX ===========*/
 /* =========== EVENTOS =========== */
 /* section uno - eventos */
+.sectionUnoEventos__container {
+  position: relative;
+  display: grid;
+  grid-auto-columns: 1fr;
+  grid-template-columns: 1fr 1fr;
+  grid-template-areas: "cuadrado1 cuadrado2 ";
+  align-items: center;
+  height: min-content; }
+  .sectionUnoEventos__containerCarusel1 {
+    grid-area: cuadrado1;
+    height: 40vh;
+    overflow: hidden; }
+  .sectionUnoEventos__containerCarusel2 {
+    grid-area: cuadrado2;
+    height: 40vh;
+    overflow: hidden; }
+  .sectionUnoEventos__container h1 {
+    position: absolute;
+    left: 0;
+    right: 0;
+    margin: auto 0;
+    text-align: center;
+    z-index: 2;
+    background: #000000ad; }
+
 /* section dos - eventos */
 .sectionDosEventos {
   display: grid;
@@ -324,33 +349,77 @@ body {
 
 /* ===== MOBILE ===== */
 @media (max-width: 576px) {
+  /* section uno - eventos */
+  .sectionUnoEventos__container {
+    grid-template-columns: 1fr;
+    grid-template-areas: "cuadrado1" "cuadrado2 "; }
+    .sectionUnoEventos__containerCarusel1, .sectionUnoEventos__containerCarusel2 {
+      height: 20vh; }
   .sectionDosEventos {
     grid-template-columns: repeat(1, 1fr); } }
 
 /* =========== fin EVENTOS ========= */
 /* =========== SERVICIOS =========== */
+.sectionUnoServicios__container {
+  text-align: center;
+  background: #ffffff;
+  border-radius: 70px;
+  overflow: hidden; }
+  .sectionUnoServicios__container h1, .sectionUnoServicios__container p {
+    color: #000;
+    font-weight: 700; }
+  .sectionUnoServicios__container p {
+    font-size: 1.5rem; }
+  .sectionUnoServicios__container img {
+    width: 100%; }
+
 .sectionDosServicios {
   display: grid;
-  grid-template-columns: repeat(2, 1fr); }
+  grid-template-columns: repeat(3, 1fr);
+  gap: 5px; }
   .sectionDosServicios .card-img-overlay {
     background: #000C;
     cursor: pointer;
-    top: unset; }
+    top: unset;
+    height: 50%; }
 
 /* ===== TABLET ===== */
 @media (max-width: 1030px) {
   .sectionDosServicios {
-    grid-template-columns: repeat(1, 1fr); }
+    grid-template-columns: repeat(2, 1fr); }
     .sectionDosServicios .card-img-overlay {
       font-size: 0.9rem !important; } }
 
 /* ===== MOBILE ===== */
 @media (max-width: 576px) {
-  .card-img-overlay {
-    top: 0; } }
+  .sectionUnoServicios__container h1, .sectionUnoServicios__container p {
+    padding: 10px; }
+  .sectionUnoServicios__container p {
+    font-size: .9rem; }
+  .sectionDosServicios {
+    grid-template-columns: repeat(1, 1fr); }
+    .sectionDosServicios .card-img-overlay {
+      top: 0;
+      background: rgba(0, 0, 0, 0.37); } }
 
 /* =========== fin SERVICIOS =========== */
 /* =========== CARTA =========== */
+/* section uno - eventos */
+.sectionUnoCarta {
+  background: #fff; }
+  .sectionUnoCarta__container h1 {
+    font-weight: 700;
+    text-align: center;
+    color: #000; }
+
+/* section dos - eventos */
+.sectionDosCarta img {
+  width: 100%; }
+
+/* ===== MOBILE ===== */
+@media (max-width: 576px) {
+  /* section uno - eventos */ }
+
 /* =========== fin CARTA =========== */
 /* =========== CONTACTO =========== */
 /* =========== fin CONTACTO =========== */

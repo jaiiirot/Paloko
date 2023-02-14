@@ -1,5 +1,44 @@
 /* =========== CARTA =========== */
 
+/* section uno - eventos */
+.sectionUnoCarta{
+    background: #fff;
+    &__container{
+        h1{
+            font-weight: 700;
+            text-align: center;
+            color: #000;
+        }
+    }
+}
 
+/* section dos - eventos */
+.sectionDosCarta{
+    img{
+        width: 100%;
+    }
+}
+
+// TABLET
+
+@media (max-width: 1030px) {
+
+    .sectionDosEventos{
+
+    }
+}
+
+/* ===== MOBILE ===== */
+
+@media (max-width: 576px) {
+    /* section uno - eventos */
+    .sectionUnoEventos{
+
+    }
+
+    .sectionDosEventos{
+        
+    }
+}
 
 /* =========== fin CARTA =========== */
