@@ -418,7 +418,9 @@ body {
 
 /* ===== MOBILE ===== */
 @media (max-width: 576px) {
-  /* section uno - eventos */ }
+  /* section uno - eventos */
+  .sectionDosEventos img {
+    padding: 0px !important; } }
 
 /* =========== fin CARTA =========== */
 /* =========== CONTACTO =========== */
