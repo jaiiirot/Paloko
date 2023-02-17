@@ -34,15 +34,15 @@
 
         h2{
             font-size: 3rem;
-            color: var(--color-siete);
-            font-family: var(--font-family-title);
+            color: $color-siete;
+            font-family: $family-title;
         }
     }
 
     &__aviso{
-        color: var(--color-uno);
+        color: $color-tres;
         font-weight: 600;
-        background: var(--color-siete);
+        background: $color-siete;
         border-radius: 15px;
         padding: 10px 5px;
         z-index: 1;
@@ -66,18 +66,18 @@
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    color: #000;
+    color: $color-tres;
     padding: 50px 0px;
     gap: 50px;
 
     &__informacion1{
-        background: var(--color-siete);
+        background: $color-siete;
         @include sectionsCompartida;
 
         img{
             width: 50%;
             height: initial;
-            background: var(--color-uno);
+            background: $color-uno;
             border-radius: 50px 0px 0px 50px;
         }
         &Text{
@@ -96,15 +96,15 @@
             font-size: 1.3rem;
             width: 60%;
             line-height: 25px;
-            background: var(--color-siete);
+            background: $color-siete;
         }
 
         &Horario{
             margin: auto;
             padding: 50px 0px;
             width: 40%;
-            background: var(--color-uno);
-            color: var(--color-cinco);
+            background: $color-tres;
+            color: $color-ocho;
             border-radius: 0 50px 50px 0;
 
             &Container{
@@ -130,8 +130,8 @@
             }
 
             button{
-                background: var(--color-siete);
-                color: var(--color-uno);
+                background: $color-siete;
+                color: $color-tres;
                 border-radius: 25px;
                 padding: 10px 60px;
                 font-size: 1.2rem;

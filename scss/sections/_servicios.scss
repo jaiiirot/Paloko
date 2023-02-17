@@ -2,7 +2,7 @@
 .sectionUnoServicios{
     &__container{
         text-align: center;
-        background: #ffffff;
+        background: $color-siete;
         border-radius: 70px;
         overflow: hidden;
         h1,p{
@@ -22,7 +22,7 @@
     grid-template-columns: repeat(3, 1fr);
     gap: 5px;
     .card-img-overlay{
-        background: #000C;
+        background: $color-nueve;
         cursor: pointer;
         top: unset;
         height: 50%;

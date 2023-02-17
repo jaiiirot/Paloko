@@ -2,44 +2,37 @@
 
 /* section uno - eventos */
 .sectionUnoCarta{
-    background: #fff;
+    background: $color-siete;
     &__container{
         h1{
             font-weight: 700;
             text-align: center;
-            color: #000;
+            color: $color-tres;
         }
     }
 }
 
 /* section dos - eventos */
 .sectionDosCarta{
+    padding: 0px 10rem;
     img{
         width: 100%;
     }
 }
 
-// TABLET
-
+// Tablet
 @media (max-width: 1030px) {
 
-    .sectionDosEventos{
-
+    .sectionDosCarta{
+        padding: 0px 5rem;
     }
 }
 
 /* ===== MOBILE ===== */
 
-@media (max-width: 576px) {
-    /* section uno - eventos */
-    .sectionUnoEventos{
-        a{}
-    }
-
-    .sectionDosEventos{
-        img{
-            padding: 0px!important;
-        }
+@media (max-width: 576px) {    
+    .sectionDosCarta{
+        padding: 0;
     }
 }
 

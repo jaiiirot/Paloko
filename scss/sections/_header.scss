@@ -1,13 +1,13 @@
 .menu{
     width: 100%;
     height: min-content;
-    background: var(--color-uno);
+    background: $color-tres;
     position: sticky;
     top: 0;
     z-index: 100;
 }
 .navbar-toggler{
-    background: var(--color-cinco);
+    background: $color-ocho;
     border-radius: 20px!important;
 }
 .navbar-nav{
@@ -17,12 +17,12 @@
     flex-grow: 0 !important;
 }
 .nav-link{
-    color: var(--color-cinco) !important;
+    color: $color-ocho !important;
     font-size: 1.3rem!important;
     font-weight: 500;
-    font-family: var(--font-family-title) !important;
+    font-family: $family-title !important;
 }
 .navbar-collapse .active{
-    color: #E1303B!important;
+    color: $color-cinco !important;
     font-weight: 700;
 }

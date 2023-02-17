@@ -1,8 +1,8 @@
 /* ===== Footer =====*/
 
 .footer{
-    font-family: var(--font-family-title);
-    background: var(--color-uno);
+    font-family: $family-title;
+    background: $color-tres;
     padding: 50px 0px;
 
     &__container{
@@ -23,10 +23,10 @@
 
             li a, i{
                 font-size: 1.2rem;
-                color: var(--color-siete);
+                color: $color-siete;
             }
             li a:hover{
-                color: var(--color-dos);
+                color: $color-cuatro;
             }
         }
     }
@@ -34,14 +34,14 @@
     &__direction, &__direction a{
         text-align: center;
         padding: 10px;
-        color: var(--color-siete);
+        color: $color-siete;
         
     }
 
     &__copyright{
         text-align: center;
         font-size: 1rem;
-        color: var(--color-siete);
+        color: $color-siete;
         padding: 2rem 0px 0px;
 
         hr{
@@ -49,7 +49,7 @@
             margin: auto;
         }
         a{
-            color: var(--color-dos);
+            color: $color-cuatro;
         }
     }
 }

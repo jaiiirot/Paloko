@@ -31,7 +31,7 @@
             margin: auto 0;
             text-align: center;
             z-index: 2;
-            background: #000000ad;
+            background: $color-nueve;
         }
     }
 
@@ -46,7 +46,8 @@
 
     &__card{
         height: min-content;
-        background: var(--color-uno);
+        background: $color-siete;
+        color: $color-tres;
         border-radius: 35px;
         cursor: pointer;
         &Imagen{

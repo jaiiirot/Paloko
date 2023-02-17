@@ -1,28 +1,14 @@
 @import url("https://fonts.googleapis.com/css2?family=Chelsea+Market&family=GFS+Neohellenic:ital,wght@0,400;0,700;1,400;1,700&display=swap");
-::-webkit-scrollbar {
-  display: none; }
-
 * {
   padding: 0;
   margin: 0;
   box-sizing: border-box;
-  text-decoration: none !important; }
+  text-decoration: none !important;
+  list-style: none; }
 
 body {
-  background: var(--color-principal);
-  color: var(--color-siete); }
-
-:root {
-  --color-principal: #0f0f0f;
-  --color-uno: #000;
-  --color-dos: #E1303B;
-  --color-tres: #46A7DF;
-  --color-cuatro: #202947;
-  --color-cinco: #dbdbdb;
-  --color-seis: #E5E811;
-  --color-siete: #fff;
-  --font-family-text: 'GFS Neohellenic', sans-serif;
-  --font-family-title: 'Chelsea Market', cursive; }
+  background: #0f0f0f;
+  color: #fff; }
 
 /* ANIMACIONES */
 @keyframes rotate {
@@ -34,13 +20,13 @@ body {
 .menu {
   width: 100%;
   height: min-content;
-  background: var(--color-uno);
+  background: #000;
   position: sticky;
   top: 0;
   z-index: 100; }
 
 .navbar-toggler {
-  background: var(--color-cinco);
+  background: #dbdbdb;
   border-radius: 20px !important; }
 
 .navbar-nav {
@@ -50,19 +36,19 @@ body {
   flex-grow: 0 !important; }
 
 .nav-link {
-  color: var(--color-cinco) !important;
+  color: #dbdbdb !important;
   font-size: 1.3rem !important;
   font-weight: 500;
-  font-family: var(--font-family-title) !important; }
+  font-family: "Chelsea Market", cursive !important; }
 
 .navbar-collapse .active {
-  color: #E1303B !important;
+  color: #46A7DF !important;
   font-weight: 700; }
 
 /* ===== Footer =====*/
 .footer {
-  font-family: var(--font-family-title);
-  background: var(--color-uno);
+  font-family: "Chelsea Market", cursive;
+  background: #000;
   padding: 50px 0px; }
   .footer__container {
     padding: 25px;
@@ -78,23 +64,23 @@ body {
       list-style-type: none; }
       .footer__container .footer__options li a, .footer__container .footer__options i {
         font-size: 1.2rem;
-        color: var(--color-siete); }
+        color: #fff; }
       .footer__container .footer__options li a:hover {
-        color: var(--color-dos); }
+        color: #E1303B; }
   .footer__direction, .footer__direction a {
     text-align: center;
     padding: 10px;
-    color: var(--color-siete); }
+    color: #fff; }
   .footer__copyright {
     text-align: center;
     font-size: 1rem;
-    color: var(--color-siete);
+    color: #fff;
     padding: 2rem 0px 0px; }
     .footer__copyright hr {
       width: 70%;
       margin: auto; }
     .footer__copyright a {
-      color: var(--color-dos); }
+      color: #E1303B; }
 
 /* ===== TABLET ===== */
 @media (max-width: 1030px) {
@@ -142,12 +128,12 @@ body {
       animation: rotate 5s ease-in-out; }
     .sectionUnoIndex__logoPregunta h2 {
       font-size: 3rem;
-      color: var(--color-siete);
-      font-family: var(--font-family-title); }
+      color: #fff;
+      font-family: "Chelsea Market", cursive; }
   .sectionUnoIndex__aviso {
-    color: var(--color-uno);
+    color: #000;
     font-weight: 600;
-    background: var(--color-siete);
+    background: #fff;
     border-radius: 15px;
     padding: 10px 5px;
     z-index: 1;
@@ -171,7 +157,7 @@ body {
   padding: 50px 0px;
   gap: 50px; }
   .sectionDosIndex__informacion1 {
-    background: var(--color-siete);
+    background: #fff;
     width: 96%;
     height: max-content;
     display: flex;
@@ -179,7 +165,7 @@ body {
     .sectionDosIndex__informacion1 img {
       width: 50%;
       height: initial;
-      background: var(--color-uno);
+      background: #0f0f0f;
       border-radius: 50px 0px 0px 50px; }
     .sectionDosIndex__informacion1Text {
       width: 50%;
@@ -196,13 +182,13 @@ body {
       font-size: 1.3rem;
       width: 60%;
       line-height: 25px;
-      background: var(--color-siete); }
+      background: #fff; }
     .sectionDosIndex__informacion2Horario {
       margin: auto;
       padding: 50px 0px;
       width: 40%;
-      background: var(--color-uno);
-      color: var(--color-cinco);
+      background: #000;
+      color: #dbdbdb;
       border-radius: 0 50px 50px 0; }
       .sectionDosIndex__informacion2HorarioContainer {
         display: flex;
@@ -219,8 +205,8 @@ body {
         .sectionDosIndex__informacion2HorarioContainer--separacion {
           align-items: flex-end; }
       .sectionDosIndex__informacion2Horario button {
-        background: var(--color-siete);
-        color: var(--color-uno);
+        background: #fff;
+        color: #000;
         border-radius: 25px;
         padding: 10px 60px;
         font-size: 1.2rem;
@@ -310,7 +296,8 @@ body {
   margin: 20px; }
   .sectionDosEventos__card {
     height: min-content;
-    background: var(--color-uno);
+    background: #fff;
+    color: #000;
     border-radius: 35px;
     cursor: pointer; }
     .sectionDosEventos__cardImagen {
@@ -362,7 +349,7 @@ body {
 /* =========== SERVICIOS =========== */
 .sectionUnoServicios__container {
   text-align: center;
-  background: #ffffff;
+  background: #fff;
   border-radius: 70px;
   overflow: hidden; }
   .sectionUnoServicios__container h1, .sectionUnoServicios__container p {
@@ -378,7 +365,7 @@ body {
   grid-template-columns: repeat(3, 1fr);
   gap: 5px; }
   .sectionDosServicios .card-img-overlay {
-    background: #000C;
+    background: #000000ad;
     cursor: pointer;
     top: unset;
     height: 50%; }
@@ -413,15 +400,72 @@ body {
     color: #000; }
 
 /* section dos - eventos */
-.sectionDosCarta img {
-  width: 100%; }
+.sectionDosCarta {
+  padding: 0px 10rem; }
+  .sectionDosCarta img {
+    width: 100%; }
+
+@media (max-width: 1030px) {
+  .sectionDosCarta {
+    padding: 0px 5rem; } }
 
 /* ===== MOBILE ===== */
 @media (max-width: 576px) {
-  /* section uno - eventos */
-  .sectionDosEventos img {
-    padding: 0px !important; } }
+  .sectionDosCarta {
+    padding: 0; } }
 
 /* =========== fin CARTA =========== */
 /* =========== CONTACTO =========== */
+.sectionUnoContaco .accordion .accordion-item {
+  color: #fff !important; }
+
+.sectionDosContacto {
+  height: max-content;
+  margin: 20px auto;
+  gap: 15px;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-areas: "rs mp" "ct mp"; }
+  .sectionDosContacto__c1 {
+    grid-area: mp;
+    overflow: hidden; }
+    .sectionDosContacto__c1 iframe {
+      width: 100%;
+      height: 100%;
+      border: 0; }
+  .sectionDosContacto__c2 {
+    grid-area: ct; }
+  .sectionDosContacto__c3 {
+    grid-area: rs; }
+    .sectionDosContacto__c3 ul {
+      margin: 0;
+      padding: 0;
+      display: flex;
+      justify-content: center;
+      gap: 50px; }
+      .sectionDosContacto__c3 ul li .facebook:hover {
+        background: #184fc5; }
+      .sectionDosContacto__c3 ul li .instagram:hover {
+        background: #c32aa3; }
+      .sectionDosContacto__c3 ul li a {
+        display: block;
+        width: 100px;
+        height: 100px;
+        line-height: 100px;
+        font-size: 40px;
+        text-align: center;
+        color: #fff;
+        transition: .5s ease-in-out;
+        position: relative;
+        border-radius: 30%;
+        border: #fff solid 4px; }
+      .sectionDosContacto__c3 ul li a:hover {
+        border-radius: 50%;
+        overflow: hidden; }
+
+@media (max-width: 576px) {
+  .sectionDosContacto {
+    grid-template-columns: 1fr;
+    grid-template-areas: "mp" "rs" "ct"; } }
+
 /* =========== fin CONTACTO =========== */
