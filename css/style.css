@@ -416,9 +416,6 @@ body {
 
 /* =========== fin CARTA =========== */
 /* =========== CONTACTO =========== */
-.sectionUnoContaco .accordion .accordion-item {
-  color: #fff !important; }
-
 .sectionDosContacto {
   height: max-content;
   margin: 20px auto;
