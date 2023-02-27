@@ -1,0 +1,19 @@
+• Se agregó única en cada HTML para ser mostrado por los buscadores.
+
+• Cada HTML tiene entre 5 y 8 keywords especificas según el contenido encontrado y la función de la página.
+
+• Title específico para cada HTML relacionado con el contenido que se encuentra en el mismo.
+
+• Se especificó el idioma utilizado en cada HTML.
+
+• Cada HTML tiene su correspondiente H1 destacando lo que el usuario puede encontrar en el sitio.
+
+• Las secciones están guardadas en una subcarpeta para generar jerarquía de sitio.
+
+• Se aprobó test responsive:
+  https://search.google.com/test/mobile-friendly
+
+• Se verificó mapa del sitio:
+  https://www.xml-sitemaps.com/
+
+• Adicionalmente, se minimizó el tamaño de imágenes para optimizar el tiempo de carga del sitio.
