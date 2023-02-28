@@ -1,21 +1,21 @@
 /* =========== INDEX ========== */
 
-@mixin sectionsCompartida{
+@mixin sectionsCompartida($hei){
     width: 96%;
-    height: max-content;
+    height: $hei;
     display: flex;
     border-radius: 55px;
 }
 @mixin infoCompartida{
     width: 100%;
-    font-size: 1rem;
+    font-size: .9rem;
     line-height: unset;
     padding: 20px;
 }
 
 /* sectionUno - Index */
 .sectionUnoIndex{
-    background: url('../recursos/iconos/fondoPool.jpg') no-repeat center;
+    background: url('../recursos/imagenes/index/fondoPool.jpg') no-repeat center;
     background-size: cover;
     width: 100%;
     height: 110vh;
@@ -72,28 +72,35 @@
 
     &__informacion1{
         background: $color-siete;
-        @include sectionsCompartida;
-
+        @include sectionsCompartida(min-content);
+        overflow: hidden;
         img{
+            object-fit: cover;
             width: 50%;
-            height: initial;
+            max-height: 740px;
             background: $color-uno;
             border-radius: 50px 0px 0px 50px;
         }
         &Text{
+            margin: auto;
             width: 50%;
-            padding: 40px;
-            font-size: 1.3rem;
-            line-height: 30px;
+            height: min-content;
+            padding: 30px;
+            font-size: 1rem;
+            word-break: keep-all;
+            p{
+                margin-bottom: .8rem;
+            }
         }
     }
 
     &__informacion2{
-        @include sectionsCompartida;
+        @include sectionsCompartida(max-content);
         
         &Info{
             padding: 50px;
-            font-size: 1.3rem;
+            font-size: 1rem;
+            word-break: keep-all;
             width: 60%;
             line-height: 25px;
             background: $color-siete;
@@ -115,8 +122,8 @@
                     list-style-type: none;
                     display: flex;
                     flex-direction: column;
-                    gap: 25px;
-                    font-size: 1.2rem;
+                    gap: 10px;
+                    font-size: 1rem;
                     font-weight: 700;
 
                     &:not(.sectionDosIndex__informacion2HorarioContainer--separacion){
@@ -148,14 +155,12 @@
 
     .sectionDosIndex__informacion1{
         img{
-            width: 60%;
+            width: 40%;
         }
 
         &Text{
-            width: 40%;
-            font-size: 1.2rem !important;
-            line-height: 25px;
-
+            width: 60%;
+            font-size: .9rem !important;
             &--none{
                 display: none;
             }
@@ -210,6 +215,9 @@
         &__informacion2{
             &Info{
                 @include infoCompartida();
+                h2{
+                    font-size: 1.4rem;
+                }
             }
             &Horario{
                 &Container{

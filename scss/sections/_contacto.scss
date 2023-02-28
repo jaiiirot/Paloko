@@ -1,4 +1,32 @@
 /* =========== CONTACTO =========== */
+.sectionUnoContacto{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    &__c1{
+        .accordion{   
+            border-radius: 50px !important;
+            overflow: hidden;
+            border: 2px solid #fff;
+            &-body{
+                ul{
+                    list-style: square url(https://img.icons8.com/color-glass/25/null/launched-rocket.png) inside !important;
+                    li{
+                        list-style: unset;
+                    }
+                }
+            }
+        }
+    }
+    &__c2{
+        margin: auto;
+        img{
+            animation: rotate 6s ease-in-out infinite;
+        }
+    }
+}
+
+
+
 .sectionDosContacto {
     height: max-content;
     margin: 20px auto;
@@ -46,13 +74,14 @@
                     width: 100px;
                     height: 100px;
                     line-height: 94px;
-                    font-size: 40px;
+                    font-size: 39px;
                     text-align: center;
                     color: $color-siete;
                     transition: .5s ease-in-out;
                     position: relative;
                     border-radius: 30%;
                     border: $color-siete solid 4px;
+                    background: #000;
                 }
 
                 a:hover {
@@ -64,15 +93,33 @@
     }
 }
 
-@media (max-width: 576px) {
+@media (max-width: 1030px) {
+    .sectionUnoContacto{
+        grid-template-columns: 1fr;
+    
+        &__c2{
+            margin: auto;
+            img{
+                animation: rotate 6s ease-in-out infinite;
+            }
+        }
+    }
+}
 
+@media (max-width: 576px) {
+    .sectionUnoContacto{
+        grid-template-columns: 1fr;
+    
+        &__c2{
+            display: none;
+        }
+    }
     .sectionDosContacto {
         grid-template-columns: 1fr;
         grid-template-areas:
             "mp"
             "rs"
             "ct";
-
     }
 }
 
