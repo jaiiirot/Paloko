@@ -17,8 +17,8 @@ Maquetar y desarrollar la pagina web con 5 secciones para el Pub de Acatraz
 
 - WOWjs: Una librería para darle efectos animados a todos los elementos que contenga.
 
-- Bootstrap: Framework que permite construir páginas web responsives
+<!-- - Bootstrap: Framework que permite construir páginas web responsives -->
 
-## Presentacion Responsive | Desktop
-![gif](https://raw.githubusercontent.com/Jairo-Tumiri/web-acatraz/main/acatraaz.gif)
+<!-- ## Presentacion Responsive | Desktop
+![gif](https://raw.githubusercontent.com/Jairo-Tumiri/web-acatraz/main/acatraaz.gif) -->
 
