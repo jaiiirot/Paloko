@@ -1,5 +1,6 @@
 @import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap");
-
+@import "./_index.scss";
+@import "./_carta.scss";
 * {
   margin: 0;
   padding: 0;
@@ -7,13 +8,29 @@
   font-family: "poppins", sans-serif;
 }
 
-body{
-  background: #F59A2E;
+* {
+  scrollbar-width: thin;
+  scrollbar-color: rgb(0, 0, 0) rgba(255, 255, 255, 0)
 }
+
+/* Works on Chrome, Edge, and Safari */
+*::-webkit-scrollbar {
+  width: 12px;
+}
+
+*::-webkit-scrollbar-track {
+  background: rgb(0, 0, 0);
+}
+
+*::-webkit-scrollbar-thumb {
+  background-color: rgba(255, 255, 255, 0);
+  border-radius: 20px;
+  border: 3px solid rgb(0, 0, 0);
+}
+
 main {
   width: 100%;
 }
-
 header{
   position: fixed;
   z-index: 100;
@@ -56,133 +73,10 @@ header{
   }
   
 }
-
-.main {
-  background: url("../public/img/02.jpg") no-repeat center center fixed;
-  background-size: cover;
-
-  overflow: hidden;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  height: 100vh;
-  width: 100%;
-  &::before{
-    content: "";
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background-color: #ffffff00;
-    backdrop-filter: blur(5px);
-  }
-}
-
-.main-welcome {
-  z-index: 1;
-  width: 100%;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  gap: 1rem;
-  &-img-mobile{
-    display: none;
-  }
-  &-location{
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-direction: column;
-    gap: 1rem;
-    &-local{
-      display: flex;
-      flex-direction: column;
-      .local-welcome{
-        display: flex;
-        align-items: center;
-      }
-      a{
-        text-decoration: none;
-        color: #000;
-        font-weight: 500;
-        font-size: 1.2rem;
-        &:hover{
-          color: #ffffff;
-        }
-      }
-    }
-    &-open{
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      gap: 8px;
-      background-color: #fff;
-      border-radius: 50px;
-      padding: 10px 15px;
-      box-shadow: 0px 0px 10px #00000061;
-      transition: all 0.3s;
-      cursor: pointer;
-      &:hover{
-        background-color: #ffffff;
-        transform: scale(1.05);
-      }
-      p{
-        font-size: 1.2rem;
-        font-weight: 500;
-      }
-    }
-  }
-}
-
-.main-redireccion{
-  z-index: 1;
-  width: 100%;
-  text-align: -webkit-center;
-  &-container{
-  display: flex;
-  flex-direction: column;
-  gap: 0.5rem;
-  max-width: 500px;
-    li {
-      width: 100%;
-      box-shadow: 0px 0px 10px #00000061;
-      list-style: none;
-      background-color: #ffffffe0;
-      padding: 15px 10px;
-      border-radius: 15px;
-      cursor: pointer;
-      transition: all 0.3s;
-      text-align: center;
-      a{
-        text-decoration: none;
-        font-size: 1rem;
-        color: #000;
-        font-weight: 600;
-      }
-      &:hover {
-        background-color: #ffffff;
-        transform: scale(1.07);
-      }
-    }
-  }
-}
-footer{
-  width: 100%;
-  text-align: center;
-  position: fixed;
-  bottom: 0;
-  font-weight: 500;
-}
-
-.mobile{
-  display: none;
-}
-
-@media (max-width: 768px) {
+@media (max-width: 880px) {
   header{
     nav{
-      width: 90%;
+      width: 95%;
       padding: 10px 10px;
       a{
         h1{
@@ -200,49 +94,9 @@ footer{
       }
     }
   }
-  .main{
-    flex-direction: column;
-    gap: 1rem;
-    height: auto;
-  }
-  
-  .main-welcome{
-    margin-top: 5rem;
-    &-img-mobile{
-      display: block;
-      img{
-        box-shadow: 0px 0px 10px #ffffff;
-        border-radius: 50%;
-        width: 100px;
-      }
-    }
-    &-location{
-      a{
-        font-size: 1rem;
-      }
-    }
-  }
-  .main-redireccion{
-    &-container{
-      width: 300px;
-      li{
-        a{
-          font-size: 14px;
-        }
-        &:hover{
-          transform: scale(1.02);
-        }
-      }
-    }
-  }
+
   footer{
     font-size: 0.8rem;
-  }
-  .mobile{
-    display: block;
-  }
-  .no-mobile{
-    display: none;
   }
 }
 

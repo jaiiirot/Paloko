@@ -1,0 +1,391 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- KEYWORDS -->
+    <meta name="description" content="La carta de menu con los alimentos que brinda Acatraz">
+    <meta name="keywords" content="comida, bebida, pub, Acatraz, hamburguesa, pizzas">
+
+    <link rel="shortcut icon" href="../recursos/iconos/logo-color.png" type="image/x-icon">
+
+    <!-- ESTILOS DE AINMATECSS -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" />
+    <!-- ICONOS -->
+    <script src="https://kit.fontawesome.com/de8fe1cee1.js" crossorigin="anonymous"></script>
+    <!-- MIS ESTILOS -->
+    <link rel="stylesheet" href="../css/main.css">
+
+    <title>Carta | Paloko</title>
+
+    <style>
+        header {
+            nav {
+                background: #fff;
+            }
+            *{
+                color: #000;
+            }
+        }
+
+        .menu {
+            background: url('../public/img/02.jpg') no-repeat center center fixed;
+            background-size: cover;
+
+            height: 100vh;
+        }
+
+        .menu::before {
+            content: '';
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100vh;
+            background-color: rgba(0, 0, 0, 0.254);
+            backdrop-filter: blur(5px);
+        }
+
+        .menu-carta * {
+            z-index: 10;
+            position: relative;
+        }
+
+        .menu-carta {
+            overflow: scroll;
+            height: 100vh;
+            padding: 20px;
+            color: white;
+        }
+
+        .menu-carta-local {
+            margin-top: 5rem;
+            text-align: center;
+            font-size: 3rem;
+            font-style: oblique;
+        }
+
+        .menu-carta-opciones {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+
+            h2 {
+                text-decoration: underline;
+                margin-top: 1.5rem;
+                font-size: 2rem;
+            }
+
+            .prod {
+                width: 100%;
+
+                span {
+                    margin: auto;
+                    width: 60%;
+                    display: flex;
+                    justify-content: space-between;
+                    padding: 10px;
+                    border-bottom: 1px solid white;
+                }
+            }
+
+        }
+
+        @media (max-width: 880px) {
+            .menu-carta {
+                padding: 10px;
+            }
+
+            .menu-carta-local {
+                font-size: 1.5rem;
+            }
+
+            .menu-carta-opciones {
+                h2 {
+                    font-size: 1rem;
+                }
+
+                .prod {
+                    span {
+                        width: 90%;
+                        font-size: .8rem;
+                    }
+                }
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <main>
+        <header>
+            <nav>
+                <img class="no-mobile" src="../public/img/logo.png" alt="Paloko Bowling - Logo"
+                    style="height: 50px; border-radius: 50%;">
+                <a href="/">
+                    <h1>
+                        @palokobowling
+                    </h1>
+                </a>
+                <ul>
+                    <li>
+                        <a href=""><i class="fa-brands fa-facebook"></i></a>
+                    </li>
+                    <li>
+                        <a href=""><i class="fa-brands fa-instagram"></i></a>
+                    </li>
+                    <li>
+                        <a href=""><i class="fa-brands fa-twitter"></i></a>
+                    </li>
+                    <li>
+                        <a href=""><i class="fa-solid fa-phone"></i></a>
+                    </li>
+                </ul>
+            </nav>
+        </header>
+        <section class="menu">
+            <article class="menu-carta">
+                <h2 class="menu-carta-local">~~ MENU <span id="menu-local"></span> ~~</h2>
+                <div class="menu-carta-opciones" id="carta">
+                </div>
+            </article>
+        </section>
+    </main>
+    <script>
+        const carta = document.getElementById('carta');
+        const menuLocal = document.getElementById('menu-local');
+        const query = new URLSearchParams(window.location.search);
+        menuLocal.innerHTML = query.get('local').toLocaleUpperCase()
+        const belgrano = [
+            {
+                title: 'DESAYUNO Y TE',
+                menu: [
+                    { producto: 'Café en Jarrito', precio: 2000 },
+                    { producto: 'Café Doble', precio: 2300 },
+                    { producto: 'Café con Leche', precio: 2300 },
+                    { producto: 'Cappuccino', precio: 2500 },
+                    { producto: 'Submarino', precio: 2500 },
+                    { producto: 'Té', precio: 1500 },
+                    { producto: 'Mate Cocido', precio: 1500 },
+                    { producto: 'Adicional Leche', precio: 500 },
+                    { producto: 'Adicional Crema', precio: 500 },
+                    { producto: 'Medialuna de Grasa', precio: 800 },
+                    { producto: 'Medialuna de Manteca', precio: 800 },
+                    { producto: 'Facturas', precio: 800 },
+                    { producto: 'Tostadas', precio: 1000 },
+                    { producto: 'Brownie', precio: 2500 },
+                    { producto: 'Alfajor de Maicena', precio: 1900 },
+                    { producto: 'Medialuna con J&Q', precio: 1400 }
+                ]
+            },
+            {
+                title: 'SANDWICHES',
+                menu: [
+                    { producto: 'Sandwich de Lomo Solo', precio: 7500 },
+                    { producto: 'Sandwich de Lomo Completo', precio: 8500 },
+                    { producto: 'Sandwich de Milanesa', precio: 6500 },
+                    { producto: 'Sandwich de Milanesa Completo', precio: 7500 },
+                    { producto: 'Sandwich de Pollo Solo', precio: 6000 },
+                    { producto: 'Sandwich de Pollo Completo', precio: 7000 },
+                    { producto: 'Sandwich de Jamón y Queso', precio: 4000 },
+                    { producto: 'Sandwich de Crudo y Queso', precio: 4600 },
+                    { producto: 'Sandwich de Salame y Queso', precio: 4000 },
+                    { producto: 'Sandwich de Queso y Tomate', precio: 4000 }
+                ]
+            },
+            {
+                title: 'PIZZAS',
+                menu: [
+                    { producto: 'Pizza de Muzzarella Grande', precio: 10000 },
+                    { producto: 'Pizza de Muzzarella Individual', precio: 8000 },
+                    { producto: 'Pizza de Muzzarella y Panceta Grande', precio: 12000 },
+                    { producto: 'Pizza de Muzzarella y Panceta Individual', precio: 10000 },
+                    { producto: 'Pizza de Fugazzeta', precioGrande: 13000, precioIndividual: 11000 },
+                    { producto: 'Pizza de Napo', precioGrande: 12000, precioIndividual: 10000 },
+                    { producto: 'Pizza de Jamón y Morrones', precioGrande: 13000, precioIndividual: 11000 },
+                    { producto: 'Pizza de Calabresa', precioGrande: 14000, precioIndividual: 12000 },
+                    { producto: 'Pizza de Rúcula y Jamón Crudo', precioGrande: 15000, precioIndividual: 13000 },
+                    { producto: 'Fainá (Porción)', precio: 1800 }
+                ]
+            },
+            {
+                title: 'EMPANADAS',
+                menu: [
+                    { producto: 'Empanada de Carne', precio: 1400 },
+                    { producto: 'Empanada de Pollo', precio: 1400 }
+                ]
+            },
+            {
+                title: 'SANWICHES DE MIGA',
+                menu: [
+                    { producto: 'Sándwich Solo', precio: 2000 },
+                    { producto: 'Sándwich Con Queso', precio: 2300 }
+                ]
+            },
+            {
+                title: 'PARA PICAR',
+                menu: [
+                    { producto: 'PAPAS FRITAS', precio: 3500 },
+                    { producto: 'PAPAS FRITAS CON CHEDDAR', precio: 4600 },
+                    { producto: 'PAPAS FRITAS CON CHEDDAR Y PANCETA', precio: 5200 },
+                    { producto: 'NACHOS CON CHEDDAR', precio: 4300 },
+                    { producto: 'CHICKEN FINGERS', precio: 4600 },
+                    { producto: 'BASTONCITOS DE MUZZA', precio: 5600 },
+                    { producto: 'PICADA PARA 2', precio: 15000 },
+                    { producto: 'PICADA PARA 4', precio: 25000 },
+                    { producto: 'ADICIONAL CHEDDAR O PANCETA', precio: 1300 }
+                ]
+            },
+            {
+                title: 'BURGES',
+                menu: [
+                    { producto: 'HAMBURGUESA SIMPLE (2 TOPPINGS)', precio: 5200 },
+                    { producto: 'HAMBURGUESA DOBLE (3 TOPPINGS)', precio: 6100 },
+                    { producto: 'TOPPING ADICIONAL', precio: 1300 }
+                ]
+            },
+            {
+                title: 'AL PLATO',
+                menu: [
+                    { producto: 'Milanesa de Carne', precio: 6000 },
+                    { producto: 'Milanesa de Carne Napo', precio: 8000 },
+                    { producto: 'Suprema de Pollo', precio: 5500 },
+                    { producto: 'Suprema Napo', precio: 7000 },
+                    { producto: 'Churrasquito de Lomo', precio: 7000 },
+                    { producto: 'Churrasquito de Pollo', precio: 6000 },
+                    { producto: 'Huevo Frito (1)', precio: 1200 },
+                    { producto: 'Ensalada Completa del Día', precio: 4000 },
+                    { producto: 'Tortilla de Papa y Cebolla', precio: 4600 }
+                ]
+            },
+            {
+                title: 'GUARNICIONES',
+                menu: [
+                    { producto: 'Ensalada del Día', precio: 1300 },
+                    { producto: 'Papas Fritas', precio: 2500 }
+                ]
+            },
+            {
+                title: 'POSTRES',
+                menu: [
+                    { producto: 'Bocha de Helado (Por Unidad)', precio: 1400 },
+                    { producto: 'Ensalada de Frutas', precio: 2100 },
+                    { producto: 'Flan Casero', precio: 1400 },
+                    { producto: 'Brownie con Helado', precio: 3500 }
+                ]
+            },
+            {
+                title: 'BEBIDAS SIN ALCOHOL',
+                menu: [
+                    { producto: 'GASEOSA', precio: 2000 },
+                    { producto: 'AGUA SABORIZADA', precio: 2000 },
+                    { producto: 'AGUA MINERAL (CON O SIN GAS)', precio: 2000 },
+                    { producto: 'LIMONADA', precio: 2200 },
+                    { producto: 'EXPRIMIDO DE NARANJA O POMELO', precio: 2200 },
+                    { producto: 'LICUADO CON LECHE (HASTA 2 FRUTAS)', precio: 2500 },
+                    { producto: 'LICUADO CON AGUA (HASTA 2 FRUTAS)', precio: 2000 },
+                    { producto: 'ENERGIZANTE SPEED', precio: 2500 }
+                ]
+            },
+            {
+                title: 'VINOS',
+                menu: [
+                    { producto: 'ALAMOS', precio: 8000 },
+                    { producto: 'LATITUD 33', precio: 7000 },
+                    { producto: 'EMILIA MALBEC', precio: 8000 },
+                    { producto: 'EMILIA CHARDONNAY', precio: 7000 },
+                    { producto: 'LATITUD 33 BLANCO', precio: 7000 },
+                    { producto: 'SANTA JULIA ROSE', precio: 6500 }
+                ]
+            },
+            {
+                title: 'ESPUMANTES',
+                menu: [
+                    { producto: 'BARON B', precio: 30000 },
+                    { producto: 'CHANDON', precio: 15000 },
+                    { producto: 'CHANDON BRUT NATURE', precio: 15000 },
+                    { producto: 'CHANDON DÉLICE', precio: 15000 },
+                    { producto: 'CHANDON ROSÉ', precio: 12000 },
+                    { producto: 'MUMM', precio: 10000 },
+                    { producto: 'SALENTEIN BRUT NATURE', precio: 10000 },
+                    { producto: 'NORTON COSECHA ESPECIAL', precio: 0 }, // Precio no especificado
+                    { producto: 'CHANDON 187', precio: 6000 },
+                    { producto: 'SIDRA 1888', precio: 8000 }
+                ]
+            },
+            {
+                title: 'CLERICÓS',
+                menu: [
+                    { producto: 'CON SIDRA 1888', precio: 9500 },
+                    { producto: 'CON MUMM', precio: 8200 },
+                    { producto: 'CON CHAMPAGNE CHANDON', precio: 15500 },
+                    { producto: 'CON VINO BLANCO O TINTO', precio: 9000 }
+                ]
+            },
+            {
+                title: 'WHISKYS',
+                menu: [
+                    { producto: 'BLENDERS O VAT 69', precio: 2100 },
+                    { producto: 'BALLENTINES', precio: 2000 },
+                    { producto: 'J&B', precio: 2500 },
+                    { producto: 'PIPERS', precio: 2100 },
+                    { producto: 'JOHNNIE WALKER BL', precio: 3800 },
+                    { producto: 'JACK DANIELS', precio: 3800 }
+                ]
+            }
+        ];
+        const paternal = [
+            {
+                title: 'DESAYUNO Y TE',
+                menu: [
+                    { producto: 'Café en Jarrito', precio: 2000 },
+                    { producto: 'Café Doble', precio: 2300 },
+                    { producto: 'Café con Leche', precio: 2300 },
+                    { producto: 'Cappuccino', precio: 2500 },
+                    { producto: 'Submarino', precio: 2500 },
+                    { producto: 'Té', precio: 1500 },
+                    { producto: 'Mate Cocido', precio: 1500 },
+                    { producto: 'Adicional Leche', precio: 500 },
+                    { producto: 'Adicional Crema', precio: 500 },
+                    { producto: 'Medialuna de Grasa', precio: 800 },
+                    { producto: 'Medialuna de Manteca', precio: 800 },
+                    { producto: 'Facturas', precio: 800 },
+                    { producto: 'Tostadas', precio: 1000 },
+                    { producto: 'Brownie', precio: 2500 },
+                    { producto: 'Alfajor de Maicena', precio: 1900 },
+                    { producto: 'Medialuna con J&Q', precio: 1400 }
+                ]
+            }
+        ];
+        
+        let menu = [];
+        if(query.get('local') === 'belgrano') {
+            menu = belgrano;
+        }else {
+            menu = paternal;
+        }
+
+        menu.forEach(opciones => {
+            const title = document.createElement('h2');
+            title.textContent = opciones.title;
+            carta.appendChild(title);
+            opciones.menu.forEach(producto => {
+                const prod = `
+                    <div class="prod">
+                        <span>
+                            <h4>${producto.producto.toLocaleLowerCase()}</h4>
+                            <p>$ ${producto.precio}</p>
+                        </span>
+                    </div>
+                `
+                carta.innerHTML += (prod)
+            });
+        });
+    </script>
+</body>
+
+</html>
