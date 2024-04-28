@@ -1,6 +1,7 @@
 @import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap");
 @import "_index.scss";
 @import "_carta.scss";
+@import "juegos.scss";
 * {
   margin: 0;
   padding: 0;
@@ -10,7 +11,7 @@
 
 * {
   scrollbar-width: thin;
-  scrollbar-color: rgb(0, 0, 0) rgba(255, 255, 255, 0)
+  scrollbar-color: rgb(0, 0, 0) rgba(255, 255, 255, 0);
 }
 
 /* Works on Chrome, Edge, and Safari */
@@ -28,15 +29,17 @@
   border: 3px solid rgb(0, 0, 0);
 }
 
-main {
-  width: 100%;
+
+body{
+  height: 100%;
 }
-header{
+
+header {
   position: fixed;
   z-index: 100;
   width: 100%;
-  nav{
-    background-color: #ffffff61;
+  nav {
+    background-color: #fffffff0;
     backdrop-filter: blur(5px);
     width: 90%;
     padding: 10px 20px;
@@ -45,48 +48,71 @@ header{
     display: flex;
     justify-content: space-between;
     align-items: center;
-    a{
+    a {
+      display: flex;
+      justify-content: center;
+      align-items: center;
       text-decoration: none;
       color: #000;
-      h1{
+      h1 {
         font-size: 1.5rem;
         font-weight: 700;
         transition: all 0.3s;
-        &:hover{
+        &:hover {
           transform: scale(1.1);
         }
       }
     }
-    ul{
-      display: flex;
-      gap: 1rem;
-      li{
-        list-style: none;
-        a{
-          text-decoration: none;
-          color: #ffffff;
-          font-weight: 500;
-          font-size: 1.5rem;
-        }
-      }
+  }
+}
+
+* .redes-sociales {
+  display: flex;
+  gap: 1.5rem;
+  li {
+    list-style: none;
+    a {
+      text-decoration: none;
+      color: #000;
+      font-weight: 500;
+      font-size: 2rem;
     }
   }
-  
 }
+
+* footer{
+  padding-top: 1rem;
+  width: 100%;
+  text-align: center;
+  position: absolute;
+  font-weight: 700;
+  bottom: 0;
+  a{
+    color: #fff;
+  }
+}
+
+.mobile {
+  display: none;
+}
+.no-mobile {
+  display: flex;
+}
+
 @media (max-width: 880px) {
-  header{
-    nav{
+  header {
+    nav {
       width: 95%;
       padding: 10px 10px;
-      a{
-        h1{
+      a {
+        h1 {
           font-size: 1.2rem;
         }
       }
-      ul{
+      ul {
         gap: 0.5rem;
-        li{
-          a{
+        li {
+          a {
             color: #000;
             font-size: 1rem;
           }
@@ -94,9 +120,13 @@ header{
       }
     }
   }
-
+  .mobile {
+    display: flex;
+  }
+  .no-mobile {
+    display: none;
+  }
   footer{
-    font-size: 0.8rem;
+    font-size: .8rem;
   }
 }
-

@@ -23,40 +23,44 @@
 </head>
 
 <body>
-    <main>
-        <header>
-            <nav>
-                <img class="no-mobile" src="../public/img/logo.png" alt="Paloko Bowling - Logo"
-                    style="height: 50px; border-radius: 50%;">
-                <a href="/">
-                    <h1>
-                        @palokobowling
-                    </h1>
-                </a>
-                <ul>
-                    <li>
-                        <a href=""><i class="fa-brands fa-facebook"></i></a>
-                    </li>
-                    <li>
-                        <a href=""><i class="fa-brands fa-instagram"></i></a>
-                    </li>
-                    <li>
-                        <a href=""><i class="fa-brands fa-twitter"></i></a>
-                    </li>
-                    <li>
-                        <a href=""><i class="fa-solid fa-phone"></i></a>
-                    </li>
-                </ul>
-            </nav>
-        </header>
+    <header>
+        <nav>
+            <img class="no-mobile" src="../public/img/logo.png" alt="Paloko Bowling - Logo"
+                style="height: 50px; border-radius: 50%;">
+            <a href="/">
+                <h1>
+                    @palokobowling
+                </h1>
+            </a>
+            <ul class="redes-sociales no-mobile">
+                <li>
+                    <a href=""><i class="fa-brands fa-facebook"></i></a>
+                </li>
+                <li>
+                    <a href=""><i class="fa-brands fa-instagram"></i></a>
+                </li>
+                <li>
+                    <a href=""><i class="fa-brands fa-twitter"></i></a>
+                </li>
+                <li>
+                    <a href=""><i class="fa-solid fa-phone"></i></a>
+                </li>
+            </ul>
+        </nav>
+    </header>
+    <main class="s2">
         <section class="menu">
             <article class="menu-carta">
                 <h2 class="menu-carta-local">~~ MENU <span id="menu-local"></span> ~~</h2>
-                <div class="menu-carta-opciones" id="carta">
+                <div class="menu-carta-opciones wow animate__animated animate__slideInUp " id="carta">
                 </div>
             </article>
         </section>
     </main>
+    <script src="js/wow.js"></script>
+    <script>
+        new WOW().init();
+    </script>
     <script>
         const carta = document.getElementById('carta');
         const menuLocal = document.getElementById('menu-local');
@@ -263,11 +267,11 @@
                 ]
             }
         ];
-        
+
         let menu = [];
-        if(query.get('local') === 'belgrano') {
+        if (query.get('local') === 'belgrano') {
             menu = belgrano;
-        }else {
+        } else {
             menu = paternal;
         }
 
