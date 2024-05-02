@@ -7,8 +7,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
     <!-- KEYWORDS -->
-    <meta name="description" content="La carta de menu con los alimentos que brinda Acatraz">
-    <meta name="keywords" content="comida, bebida, pub, Acatraz, hamburguesa, pizzas">
+    <meta name="description" content="La carta de menu con los alimentos que brinda Paloko">
+    <meta name="keywords" content="comida, bebida, pub, Paloko, hamburguesa, pizzas">
 
     <link rel="shortcut icon" href="../recursos/iconos/logo-color.png" type="image/x-icon">
 
@@ -26,7 +26,7 @@
     <header>
         <nav>
             <a href="/Paloko/">
-                <img class="no-mobile" src="./public/img/logo.png" alt="Paloko Bowling - Logo"
+                <img class="no-mobile" src="../public/img/logo.png" alt="Paloko Bowling - Logo"
                     style="height: 50px; border-radius: 50%;">
                 <h1>
                     @PALOKOBOWLING
@@ -52,15 +52,11 @@
         <section class="menu">
             <article class="menu-carta">
                 <h2 class="menu-carta-local">~~ MENU <span id="menu-local"></span> ~~</h2>
-                <div class="menu-carta-opciones wow animate__animated animate__slideInUp " id="carta">
+                <div class="menu-carta-opciones animate__animated animate__slideInUp " id="carta">
                 </div>
             </article>
         </section>
     </main>
-    <script src="js/wow.js"></script>
-    <script>
-        new WOW().init();
-    </script>
     <script>
         const carta = document.getElementById('carta');
         const menuLocal = document.getElementById('menu-local');
