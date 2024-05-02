@@ -1,7 +1,7 @@
 # Web Acatraz
 
 ## Informacion
-Maquetar y desarrollar la pagina web con 5 secciones para el Pub de Acatraz
+Maquetar y desarrollar la pagina web con 5 secciones para el Pub de Paloko
 
 ## Objetivo
 - Diseño Responsive
