@@ -1,4 +1,4 @@
-# Web Acatraz
+# Web Paloko
 
 ## Informacion
 Maquetar y desarrollar la pagina web con 5 secciones para el Pub de Paloko
@@ -19,6 +19,4 @@ Maquetar y desarrollar la pagina web con 5 secciones para el Pub de Paloko
 
 <!-- - Bootstrap: Framework que permite construir páginas web responsives -->
 
-<!-- ## Presentacion Responsive | Desktop
-![gif](https://raw.githubusercontent.com/Jairo-Tumiri/web-acatraz/main/acatraaz.gif) -->
 
